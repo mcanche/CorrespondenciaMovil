@@ -25,6 +25,7 @@
 		183A36561B4EFBB500178E1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36531B4EFBB500178E1A /* LoginController.swift */; };
 		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
 		188395CB1B503DF800E7B8D8 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188395CA1B503DF800E7B8D8 /* Documentos.swift */; };
+		724CF4E21B50475C009F1072 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CF4E11B50475C009F1072 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		183A36531B4EFBB500178E1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
 		188395CA1B503DF800E7B8D8 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documentos.swift; sourceTree = "<group>"; };
+		724CF4E11B50475C009F1072 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				183A36181B4EF0E000178E1A /* Supporting Files */,
 				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
 				188395CA1B503DF800E7B8D8 /* Documentos.swift */,
+				724CF4E11B50475C009F1072 /* Date.swift */,
 			);
 			name = CorrespondenciaMovil;
 			path = CorrespondeciaMovil;
@@ -279,6 +282,7 @@
 				188395CB1B503DF800E7B8D8 /* Documentos.swift in Sources */,
 				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
 				183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */,
+				724CF4E21B50475C009F1072 /* Date.swift in Sources */,
 				183A36561B4EFBB500178E1A /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
