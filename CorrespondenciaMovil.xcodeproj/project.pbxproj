@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A361A1B4EF0E000178E1A /* AppDelegate.swift */; };
-		183A361E1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183A361C1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodeld */; };
-		183A36201B4EF0E000178E1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A361F1B4EF0E000178E1A /* ViewController.swift */; };
+		183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */; };
 		183A36231B4EF0E000178E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183A36211B4EF0E000178E1A /* Main.storyboard */; };
 		183A36251B4EF0E000178E1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183A36241B4EF0E000178E1A /* Images.xcassets */; };
-		183A36281B4EF0E000178E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183A36261B4EF0E000178E1A /* LaunchScreen.xib */; };
 		183A36341B4EF0E000178E1A /* CorrespondeciaMovilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36331B4EF0E000178E1A /* CorrespondeciaMovilTests.swift */; };
+		183A36411B4EF14C00178E1A /* MenuLateralController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A363F1B4EF14C00178E1A /* MenuLateralController.swift */; };
+		183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36401B4EF14C00178E1A /* MenuLateral.swift */; };
+		183A364A1B4EFA6700178E1A /* smartphone-message-send-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36441B4EFA6700178E1A /* smartphone-message-send-icon.png */; };
+		183A364B1B4EFA6700178E1A /* logoSegey.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36451B4EFA6700178E1A /* logoSegey.png */; };
+		183A364C1B4EFA6700178E1A /* splash 3X-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36461B4EFA6700178E1A /* splash 3X-2.png */; };
+		183A364D1B4EFA6700178E1A /* splash 3X.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 183A36471B4EFA6700178E1A /* splash 3X.jpg */; };
+		183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36481B4EFA6700178E1A /* splash 3X.png */; };
+		183A364F1B4EFA6700178E1A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36491B4EFA6700178E1A /* splash.png */; };
+		183A36511B4EFA8D00178E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183A36501B4EFA8D00178E1A /* LaunchScreen.xib */; };
+		183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36521B4EFBB500178E1A /* DoctosDepto.swift */; };
+		183A36561B4EFBB500178E1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36531B4EFBB500178E1A /* LoginController.swift */; };
+		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		183A36151B4EF0E000178E1A /* CorrespondeciaMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrespondeciaMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183A36151B4EF0E000178E1A /* CorrespondenciaMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrespondenciaMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36191B4EF0E000178E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183A361A1B4EF0E000178E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		183A361D1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorrespondeciaMovil.xcdatamodel; sourceTree = "<group>"; };
-		183A361F1B4EF0E000178E1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		183A361D1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CorrespondenciaMovil.xcdatamodel; sourceTree = "<group>"; };
 		183A36221B4EF0E000178E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		183A36241B4EF0E000178E1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		183A36271B4EF0E000178E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		183A362D1B4EF0E000178E1A /* CorrespondeciaMovilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorrespondeciaMovilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183A362D1B4EF0E000178E1A /* CorrespondenciaMovilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorrespondenciaMovilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36321B4EF0E000178E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183A36331B4EF0E000178E1A /* CorrespondeciaMovilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrespondeciaMovilTests.swift; sourceTree = "<group>"; };
+		183A363F1B4EF14C00178E1A /* MenuLateralController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLateralController.swift; sourceTree = "<group>"; };
+		183A36401B4EF14C00178E1A /* MenuLateral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuLateral.swift; sourceTree = "<group>"; };
+		183A36441B4EFA6700178E1A /* smartphone-message-send-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smartphone-message-send-icon.png"; sourceTree = "<group>"; };
+		183A36451B4EFA6700178E1A /* logoSegey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logoSegey.png; sourceTree = "<group>"; };
+		183A36461B4EFA6700178E1A /* splash 3X-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash 3X-2.png"; sourceTree = "<group>"; };
+		183A36471B4EFA6700178E1A /* splash 3X.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash 3X.jpg"; sourceTree = "<group>"; };
+		183A36481B4EFA6700178E1A /* splash 3X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash 3X.png"; sourceTree = "<group>"; };
+		183A36491B4EFA6700178E1A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		183A36501B4EFA8D00178E1A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		183A36521B4EFBB500178E1A /* DoctosDepto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDepto.swift; sourceTree = "<group>"; };
+		183A36531B4EFBB500178E1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +81,8 @@
 		183A360C1B4EF0E000178E1A = {
 			isa = PBXGroup;
 			children = (
-				183A36171B4EF0E000178E1A /* CorrespondeciaMovil */,
-				183A36301B4EF0E000178E1A /* CorrespondeciaMovilTests */,
+				183A36171B4EF0E000178E1A /* CorrespondenciaMovil */,
+				183A36301B4EF0E000178E1A /* CorrespondenciaMovilTests */,
 				183A36161B4EF0E000178E1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,23 +90,28 @@
 		183A36161B4EF0E000178E1A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				183A36151B4EF0E000178E1A /* CorrespondeciaMovil.app */,
-				183A362D1B4EF0E000178E1A /* CorrespondeciaMovilTests.xctest */,
+				183A36151B4EF0E000178E1A /* CorrespondenciaMovil.app */,
+				183A362D1B4EF0E000178E1A /* CorrespondenciaMovilTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		183A36171B4EF0E000178E1A /* CorrespondeciaMovil */ = {
+		183A36171B4EF0E000178E1A /* CorrespondenciaMovil */ = {
 			isa = PBXGroup;
 			children = (
 				183A361A1B4EF0E000178E1A /* AppDelegate.swift */,
-				183A361F1B4EF0E000178E1A /* ViewController.swift */,
-				183A36211B4EF0E000178E1A /* Main.storyboard */,
+				183A363E1B4EF12E00178E1A /* BlurrySideBar */,
+				183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */,
+				183A36521B4EFBB500178E1A /* DoctosDepto.swift */,
+				183A36431B4EFA4A00178E1A /* Imagenes */,
 				183A36241B4EF0E000178E1A /* Images.xcassets */,
-				183A36261B4EF0E000178E1A /* LaunchScreen.xib */,
-				183A361C1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodeld */,
+				183A36501B4EFA8D00178E1A /* LaunchScreen.xib */,
+				183A36531B4EFBB500178E1A /* LoginController.swift */,
+				183A36211B4EF0E000178E1A /* Main.storyboard */,
 				183A36181B4EF0E000178E1A /* Supporting Files */,
+				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
 			);
+			name = CorrespondenciaMovil;
 			path = CorrespondeciaMovil;
 			sourceTree = "<group>";
 		};
@@ -98,12 +123,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		183A36301B4EF0E000178E1A /* CorrespondeciaMovilTests */ = {
+		183A36301B4EF0E000178E1A /* CorrespondenciaMovilTests */ = {
 			isa = PBXGroup;
 			children = (
 				183A36331B4EF0E000178E1A /* CorrespondeciaMovilTests.swift */,
 				183A36311B4EF0E000178E1A /* Supporting Files */,
 			);
+			name = CorrespondenciaMovilTests;
 			path = CorrespondeciaMovilTests;
 			sourceTree = "<group>";
 		};
@@ -115,12 +141,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		183A363E1B4EF12E00178E1A /* BlurrySideBar */ = {
+			isa = PBXGroup;
+			children = (
+				183A363F1B4EF14C00178E1A /* MenuLateralController.swift */,
+				183A36401B4EF14C00178E1A /* MenuLateral.swift */,
+			);
+			name = BlurrySideBar;
+			sourceTree = "<group>";
+		};
+		183A36431B4EFA4A00178E1A /* Imagenes */ = {
+			isa = PBXGroup;
+			children = (
+				183A36441B4EFA6700178E1A /* smartphone-message-send-icon.png */,
+				183A36451B4EFA6700178E1A /* logoSegey.png */,
+				183A36461B4EFA6700178E1A /* splash 3X-2.png */,
+				183A36471B4EFA6700178E1A /* splash 3X.jpg */,
+				183A36481B4EFA6700178E1A /* splash 3X.png */,
+				183A36491B4EFA6700178E1A /* splash.png */,
+			);
+			name = Imagenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		183A36141B4EF0E000178E1A /* CorrespondeciaMovil */ = {
+		183A36141B4EF0E000178E1A /* CorrespondenciaMovil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183A36371B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondeciaMovil" */;
+			buildConfigurationList = 183A36371B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondenciaMovil" */;
 			buildPhases = (
 				183A36111B4EF0E000178E1A /* Sources */,
 				183A36121B4EF0E000178E1A /* Frameworks */,
@@ -130,14 +178,14 @@
 			);
 			dependencies = (
 			);
-			name = CorrespondeciaMovil;
+			name = CorrespondenciaMovil;
 			productName = CorrespondeciaMovil;
-			productReference = 183A36151B4EF0E000178E1A /* CorrespondeciaMovil.app */;
+			productReference = 183A36151B4EF0E000178E1A /* CorrespondenciaMovil.app */;
 			productType = "com.apple.product-type.application";
 		};
-		183A362C1B4EF0E000178E1A /* CorrespondeciaMovilTests */ = {
+		183A362C1B4EF0E000178E1A /* CorrespondenciaMovilTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 183A363A1B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondeciaMovilTests" */;
+			buildConfigurationList = 183A363A1B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondenciaMovilTests" */;
 			buildPhases = (
 				183A36291B4EF0E000178E1A /* Sources */,
 				183A362A1B4EF0E000178E1A /* Frameworks */,
@@ -148,9 +196,9 @@
 			dependencies = (
 				183A362F1B4EF0E000178E1A /* PBXTargetDependency */,
 			);
-			name = CorrespondeciaMovilTests;
+			name = CorrespondenciaMovilTests;
 			productName = CorrespondeciaMovilTests;
-			productReference = 183A362D1B4EF0E000178E1A /* CorrespondeciaMovilTests.xctest */;
+			productReference = 183A362D1B4EF0E000178E1A /* CorrespondenciaMovilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -171,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 183A36101B4EF0E000178E1A /* Build configuration list for PBXProject "CorrespondeciaMovil" */;
+			buildConfigurationList = 183A36101B4EF0E000178E1A /* Build configuration list for PBXProject "CorrespondenciaMovil" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -184,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				183A36141B4EF0E000178E1A /* CorrespondeciaMovil */,
-				183A362C1B4EF0E000178E1A /* CorrespondeciaMovilTests */,
+				183A36141B4EF0E000178E1A /* CorrespondenciaMovil */,
+				183A362C1B4EF0E000178E1A /* CorrespondenciaMovilTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				183A36231B4EF0E000178E1A /* Main.storyboard in Resources */,
-				183A36281B4EF0E000178E1A /* LaunchScreen.xib in Resources */,
+				183A364C1B4EFA6700178E1A /* splash 3X-2.png in Resources */,
+				183A364B1B4EFA6700178E1A /* logoSegey.png in Resources */,
+				183A364D1B4EFA6700178E1A /* splash 3X.jpg in Resources */,
+				183A364A1B4EFA6700178E1A /* smartphone-message-send-icon.png in Resources */,
+				183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */,
+				183A364F1B4EFA6700178E1A /* splash.png in Resources */,
+				183A36511B4EFA8D00178E1A /* LaunchScreen.xib in Resources */,
 				183A36251B4EF0E000178E1A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,9 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183A36201B4EF0E000178E1A /* ViewController.swift in Sources */,
-				183A361E1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodeld in Sources */,
+				183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */,
+				183A36411B4EF14C00178E1A /* MenuLateralController.swift in Sources */,
+				183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */,
+				183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */,
+				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
 				183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */,
+				183A36561B4EFBB500178E1A /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +292,7 @@
 /* Begin PBXTargetDependency section */
 		183A362F1B4EF0E000178E1A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 183A36141B4EF0E000178E1A /* CorrespondeciaMovil */;
+			target = 183A36141B4EF0E000178E1A /* CorrespondenciaMovil */;
 			targetProxy = 183A362E1B4EF0E000178E1A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -246,14 +304,6 @@
 				183A36221B4EF0E000178E1A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		183A36261B4EF0E000178E1A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				183A36271B4EF0E000178E1A /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -346,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CorrespondeciaMovil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorrespondenciaMovil;
 			};
 			name = Debug;
 		};
@@ -356,7 +406,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CorrespondeciaMovil/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorrespondenciaMovil;
 			};
 			name = Release;
 		};
@@ -374,7 +424,7 @@
 				);
 				INFOPLIST_FILE = CorrespondeciaMovilTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorrespondenciaMovilTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorrespondeciaMovil.app/CorrespondeciaMovil";
 			};
 			name = Debug;
@@ -389,7 +439,7 @@
 				);
 				INFOPLIST_FILE = CorrespondeciaMovilTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CorrespondenciaMovilTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CorrespondeciaMovil.app/CorrespondeciaMovil";
 			};
 			name = Release;
@@ -397,7 +447,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		183A36101B4EF0E000178E1A /* Build configuration list for PBXProject "CorrespondeciaMovil" */ = {
+		183A36101B4EF0E000178E1A /* Build configuration list for PBXProject "CorrespondenciaMovil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183A36351B4EF0E000178E1A /* Debug */,
@@ -406,32 +456,34 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		183A36371B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondeciaMovil" */ = {
+		183A36371B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondenciaMovil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183A36381B4EF0E000178E1A /* Debug */,
 				183A36391B4EF0E000178E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		183A363A1B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondeciaMovilTests" */ = {
+		183A363A1B4EF0E000178E1A /* Build configuration list for PBXNativeTarget "CorrespondenciaMovilTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				183A363B1B4EF0E000178E1A /* Debug */,
 				183A363C1B4EF0E000178E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		183A361C1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodeld */ = {
+		183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				183A361D1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodel */,
+				183A361D1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodel */,
 			);
-			currentVersion = 183A361D1B4EF0E000178E1A /* CorrespondeciaMovil.xcdatamodel */;
-			path = CorrespondeciaMovil.xcdatamodeld;
+			currentVersion = 183A361D1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodel */;
+			path = CorrespondenciaMovil.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
