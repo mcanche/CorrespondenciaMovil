@@ -24,6 +24,7 @@
 		183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36521B4EFBB500178E1A /* DoctosDepto.swift */; };
 		183A36561B4EFBB500178E1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36531B4EFBB500178E1A /* LoginController.swift */; };
 		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
+		188395CB1B503DF800E7B8D8 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188395CA1B503DF800E7B8D8 /* Documentos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		183A36521B4EFBB500178E1A /* DoctosDepto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDepto.swift; sourceTree = "<group>"; };
 		183A36531B4EFBB500178E1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
+		188395CA1B503DF800E7B8D8 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documentos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				183A36211B4EF0E000178E1A /* Main.storyboard */,
 				183A36181B4EF0E000178E1A /* Supporting Files */,
 				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
+				188395CA1B503DF800E7B8D8 /* Documentos.swift */,
 			);
 			name = CorrespondenciaMovil;
 			path = CorrespondeciaMovil;
@@ -273,6 +276,7 @@
 				183A36411B4EF14C00178E1A /* MenuLateralController.swift in Sources */,
 				183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */,
 				183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */,
+				188395CB1B503DF800E7B8D8 /* Documentos.swift in Sources */,
 				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
 				183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */,
 				183A36561B4EFBB500178E1A /* LoginController.swift in Sources */,
