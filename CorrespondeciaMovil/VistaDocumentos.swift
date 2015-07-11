@@ -16,15 +16,18 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        let elementosmenu: [[String]] = [["Actualizar","MenuAct"],["Resumen semanal","MenuRep"],["Cerrar sesión","MenuSalir"]]
         
+        /*Configurar e inicializar el menú lateral*/
+        let elementosmenu: [[String]] = [["Actualizar","MenuAct"],["Resumen semanal","MenuRep"],["Cerrar sesión","MenuSalir"]]
         menulat = MenuLateral (_vistaoriginal: self.view, _elementosmenu: elementosmenu)
         menulat.delegado = self
-
+        /*Fin de configuración del menú lateral*/
         // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

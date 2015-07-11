@@ -13,20 +13,19 @@ import CoreData
 
 class Documentos: NSManagedObject
 {
-   
-    @NSManaged var folio: Int64
-    @NSManaged var ofsol: Int64
+    
+    @NSManaged var folio: NSNumber
+    @NSManaged var ofsol: NSNumber
     @NSManaged var asunto: String
-    @NSManaged var idestatus: Int
+    @NSManaged var idestatus: NSNumber
     @NSManaged var estatus: String
-    @NSManaged var anio: Int16
+    @NSManaged var anio: NSNumber
     @NSManaged var solicitud: NSDate
     @NSManaged var recepcion: NSDate
-    @NSManaged var idnivel: Int
+    @NSManaged var idnivel: NSNumber
     @NSManaged var nivel: String
-    @NSManaged var iddepto: Int
+    @NSManaged var iddepto: NSNumber
     @NSManaged var depto: String
-    @NSManaged var vigente: Bool
-    
-    
+    @NSManaged var vigente: NSNumber
+
 }

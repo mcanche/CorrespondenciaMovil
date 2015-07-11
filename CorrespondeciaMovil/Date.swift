@@ -29,11 +29,11 @@ class Date
         return date!
     }
     
-    class func parse(dateStr:String, format:String="yyyy-MM-dd") -> NSDate
+    class func parse(_dateStr:String, _format:String="yyyy-MM-dd") -> NSDate
     {
         var dateFmt = NSDateFormatter()
         dateFmt.timeZone = NSTimeZone.defaultTimeZone()
-        dateFmt.dateFormat = format
-        return dateFmt.dateFromString(dateStr)!
+        dateFmt.dateFormat = _format
+        return dateFmt.dateFromString(_dateStr)!
     }
 }
