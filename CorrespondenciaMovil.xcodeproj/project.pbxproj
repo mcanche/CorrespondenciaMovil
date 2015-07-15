@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1829706E1B5722FE00B75545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829706D1B5722FE00B75545 /* LaunchScreen.xib */; };
 		183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A361A1B4EF0E000178E1A /* AppDelegate.swift */; };
 		183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */; };
 		183A36231B4EF0E000178E1A /* Principal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183A36211B4EF0E000178E1A /* Principal.storyboard */; };
@@ -20,7 +21,6 @@
 		183A364D1B4EFA6700178E1A /* splash 3X.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 183A36471B4EFA6700178E1A /* splash 3X.jpg */; };
 		183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36481B4EFA6700178E1A /* splash 3X.png */; };
 		183A364F1B4EFA6700178E1A /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 183A36491B4EFA6700178E1A /* splash.png */; };
-		183A36511B4EFA8D00178E1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183A36501B4EFA8D00178E1A /* LaunchScreen.xib */; };
 		183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36521B4EFBB500178E1A /* DoctosDepto.swift */; };
 		183A36561B4EFBB500178E1A /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36531B4EFBB500178E1A /* LoginController.swift */; };
 		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1829706D1B5722FE00B75545 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		183A36151B4EF0E000178E1A /* CorrespondenciaMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrespondenciaMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36191B4EF0E000178E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		183A361A1B4EF0E000178E1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		183A36471B4EFA6700178E1A /* splash 3X.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash 3X.jpg"; sourceTree = "<group>"; };
 		183A36481B4EFA6700178E1A /* splash 3X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash 3X.png"; sourceTree = "<group>"; };
 		183A36491B4EFA6700178E1A /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
-		183A36501B4EFA8D00178E1A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		183A36521B4EFBB500178E1A /* DoctosDepto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDepto.swift; sourceTree = "<group>"; };
 		183A36531B4EFBB500178E1A /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
@@ -105,6 +105,7 @@
 		183A36171B4EF0E000178E1A /* CorrespondenciaMovil */ = {
 			isa = PBXGroup;
 			children = (
+				1829706D1B5722FE00B75545 /* LaunchScreen.xib */,
 				183A361A1B4EF0E000178E1A /* AppDelegate.swift */,
 				183A363E1B4EF12E00178E1A /* BlurrySideBar */,
 				183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */,
@@ -114,7 +115,6 @@
 				189B60A01B506DD600177535 /* Documentos.swift */,
 				183A36431B4EFA4A00178E1A /* Imagenes */,
 				183A36241B4EF0E000178E1A /* Images.xcassets */,
-				183A36501B4EFA8D00178E1A /* LaunchScreen.xib */,
 				183A36531B4EFBB500178E1A /* LoginController.swift */,
 				183A36211B4EF0E000178E1A /* Principal.storyboard */,
 				183A36181B4EF0E000178E1A /* Supporting Files */,
@@ -259,7 +259,7 @@
 				183A364A1B4EFA6700178E1A /* smartphone-message-send-icon.png in Resources */,
 				183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */,
 				183A364F1B4EFA6700178E1A /* splash.png in Resources */,
-				183A36511B4EFA8D00178E1A /* LaunchScreen.xib in Resources */,
+				1829706E1B5722FE00B75545 /* LaunchScreen.xib in Resources */,
 				183A36251B4EF0E000178E1A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
