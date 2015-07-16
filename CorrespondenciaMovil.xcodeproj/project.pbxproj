@@ -26,6 +26,7 @@
 		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
 		189B60A11B506DD600177535 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A01B506DD600177535 /* Documentos.swift */; };
 		189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */; };
+		6AEEE13D1B58145B0002F32C /* ingresar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEE13C1B58145B0002F32C /* ingresar.png */; };
 		724CF4E21B50475C009F1072 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CF4E11B50475C009F1072 /* Date.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
 		189B60A01B506DD600177535 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documentos.swift; path = ../Documentos.swift; sourceTree = "<group>"; };
 		189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDeptoPend.swift; sourceTree = "<group>"; };
+		6AEEE13C1B58145B0002F32C /* ingresar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresar.png; sourceTree = "<group>"; };
 		724CF4E11B50475C009F1072 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 				183A36441B4EFA6700178E1A /* smartphone-message-send-icon.png */,
 				183A36451B4EFA6700178E1A /* logoSegey.png */,
 				183A36461B4EFA6700178E1A /* splash 3X-2.png */,
+				6AEEE13C1B58145B0002F32C /* ingresar.png */,
 				183A36471B4EFA6700178E1A /* splash 3X.jpg */,
 				183A36481B4EFA6700178E1A /* splash 3X.png */,
 				183A36491B4EFA6700178E1A /* splash.png */,
@@ -258,6 +261,7 @@
 				183A364D1B4EFA6700178E1A /* splash 3X.jpg in Resources */,
 				183A364A1B4EFA6700178E1A /* smartphone-message-send-icon.png in Resources */,
 				183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */,
+				6AEEE13D1B58145B0002F32C /* ingresar.png in Resources */,
 				183A364F1B4EFA6700178E1A /* splash.png in Resources */,
 				1829706E1B5722FE00B75545 /* LaunchScreen.xib in Resources */,
 				183A36251B4EF0E000178E1A /* Images.xcassets in Resources */,
