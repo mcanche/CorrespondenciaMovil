@@ -80,7 +80,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.86348416969999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dZX-Ui-hJX" firstAttribute="top" secondItem="98h-3Q-WFQ" secondAttribute="bottom" constant="50" id="0Cb-mE-gXE"/>
                             <constraint firstItem="aqZ-eb-u5w" firstAttribute="leading" secondItem="KM2-uf-FxD" secondAttribute="leading" constant="151" id="2FB-ta-18D"/>
@@ -739,6 +739,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="2.png" width="500" height="500"/>
         <image name="DoctoContestado" width="128" height="128"/>
         <image name="DoctoPend" width="64" height="64"/>
         <image name="DoctoRecep" width="256" height="256"/>
