@@ -27,6 +27,7 @@
 		189B60A11B506DD600177535 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A01B506DD600177535 /* Documentos.swift */; };
 		189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */; };
 		6AEEE13D1B58145B0002F32C /* ingresar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEE13C1B58145B0002F32C /* ingresar.png */; };
+		6AEEE13F1B5824090002F32C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEE13E1B5824090002F32C /* 2.png */; };
 		724CF4E21B50475C009F1072 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CF4E11B50475C009F1072 /* Date.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		189B60A01B506DD600177535 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documentos.swift; path = ../Documentos.swift; sourceTree = "<group>"; };
 		189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDeptoPend.swift; sourceTree = "<group>"; };
 		6AEEE13C1B58145B0002F32C /* ingresar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresar.png; sourceTree = "<group>"; };
+		6AEEE13E1B5824090002F32C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		724CF4E11B50475C009F1072 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				183A36451B4EFA6700178E1A /* logoSegey.png */,
 				183A36461B4EFA6700178E1A /* splash 3X-2.png */,
 				6AEEE13C1B58145B0002F32C /* ingresar.png */,
+				6AEEE13E1B5824090002F32C /* 2.png */,
 				183A36471B4EFA6700178E1A /* splash 3X.jpg */,
 				183A36481B4EFA6700178E1A /* splash 3X.png */,
 				183A36491B4EFA6700178E1A /* splash.png */,
@@ -255,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AEEE13F1B5824090002F32C /* 2.png in Resources */,
 				183A36231B4EF0E000178E1A /* Principal.storyboard in Resources */,
 				183A364C1B4EFA6700178E1A /* splash 3X-2.png in Resources */,
 				183A364B1B4EFA6700178E1A /* logoSegey.png in Resources */,
