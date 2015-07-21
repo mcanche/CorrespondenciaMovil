@@ -26,6 +26,7 @@
 		183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A36541B4EFBB500178E1A /* VistaDocumentos.swift */; };
 		189B60A11B506DD600177535 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A01B506DD600177535 /* Documentos.swift */; };
 		189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */; };
+		18C249D81B5A9BFA0017BC7E /* Imagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C249D71B5A9BFA0017BC7E /* Imagen.swift */; };
 		6AED3ADA1B5973040062131C /* Contestado I.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AED3AD31B5973040062131C /* Contestado I.png */; };
 		6AED3ADB1B5973040062131C /* Contestado II.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AED3AD41B5973040062131C /* Contestado II.png */; };
 		6AED3ADC1B5973040062131C /* Pendiente 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AED3AD51B5973040062131C /* Pendiente 1.png */; };
@@ -75,6 +76,7 @@
 		183A36541B4EFBB500178E1A /* VistaDocumentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaDocumentos.swift; sourceTree = "<group>"; };
 		189B60A01B506DD600177535 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documentos.swift; path = ../Documentos.swift; sourceTree = "<group>"; };
 		189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDeptoPend.swift; sourceTree = "<group>"; };
+		18C249D71B5A9BFA0017BC7E /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
 		6AED3AD31B5973040062131C /* Contestado I.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contestado I.png"; sourceTree = "<group>"; };
 		6AED3AD41B5973040062131C /* Contestado II.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contestado II.png"; sourceTree = "<group>"; };
 		6AED3AD51B5973040062131C /* Pendiente 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pendiente 1.png"; sourceTree = "<group>"; };
@@ -129,7 +131,6 @@
 		183A36171B4EF0E000178E1A /* CorrespondenciaMovil */ = {
 			isa = PBXGroup;
 			children = (
-				1829706D1B5722FE00B75545 /* LaunchScreen.xib */,
 				183A361A1B4EF0E000178E1A /* AppDelegate.swift */,
 				183A363E1B4EF12E00178E1A /* BlurrySideBar */,
 				183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */,
@@ -137,12 +138,14 @@
 				183A36521B4EFBB500178E1A /* DoctosDepto.swift */,
 				189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */,
 				189B60A01B506DD600177535 /* Documentos.swift */,
-				6AED3AE11B5978E90062131C /* Status */,
-				6AED3AD21B5973040062131C /* logos tab bar cotroller */,
+				18C249D71B5A9BFA0017BC7E /* Imagen.swift */,
 				183A36431B4EFA4A00178E1A /* Imagenes */,
 				183A36241B4EF0E000178E1A /* Images.xcassets */,
+				1829706D1B5722FE00B75545 /* LaunchScreen.xib */,
 				183A36531B4EFBB500178E1A /* LoginController.swift */,
+				6AED3AD21B5973040062131C /* logos tab bar cotroller */,
 				183A36211B4EF0E000178E1A /* Principal.storyboard */,
+				6AED3AE11B5978E90062131C /* Status */,
 				183A36181B4EF0E000178E1A /* Supporting Files */,
 				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
 			);
@@ -349,6 +352,7 @@
 				183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */,
 				189B60A11B506DD600177535 /* Documentos.swift in Sources */,
 				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
+				18C249D81B5A9BFA0017BC7E /* Imagen.swift in Sources */,
 				183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */,
 				724CF4E21B50475C009F1072 /* Date.swift in Sources */,
 				183A36561B4EFBB500178E1A /* LoginController.swift in Sources */,

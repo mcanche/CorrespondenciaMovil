@@ -72,16 +72,22 @@ class DoctosDeptoPend: UITableViewController
         let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellid) as! UITableViewCell
         
         var docto: NSManagedObject = doctos[indexPath.row] as! NSManagedObject
+        var objimagen : Imagen = Imagen()
         
-        
+        //Etiquetas
         var texto: UILabel = cell.viewWithTag(1) as! UILabel
         texto.text = ("Folio: "+docto.valueForKeyPath("folio")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
-        
         texto = cell.viewWithTag(2) as! UILabel
         texto.text = ("Oficio: "+docto.valueForKeyPath("ofsol")!.stringValue!)
-        
+        //Imagen
+        let imagennom = "Verde.png"
+        let imagennva = objimagen.cambiarTam(UIImage(named: imagennom)!, tamsol: CGSizeMake(30,30))
+        var imagencapa: CALayer! = cell.imageView?.layer
+        imagencapa.cornerRadius = imagencapa.frame.size.width / 2
+        imagencapa.masksToBounds = true
+        cell.imageView?.image = imagennva
         //texto = cell.viewWithTag(3) as! UILabel
-        //texto.text = ("Asunto: "+(docto.valueForKeyPath("asunto")! as! String))
+        //texto.text = ("Asunto: "+(docto.valueForKeyPath("imageasunto")! as! String))
         
         //cell.imageView!.image = UIImage(named: "MenuAct")
         
