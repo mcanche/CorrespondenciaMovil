@@ -39,6 +39,13 @@
 		6AED3AE71B5978E90062131C /* Verde.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AED3AE41B5978E90062131C /* Verde.png */; };
 		6AEEE13D1B58145B0002F32C /* ingresar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEE13C1B58145B0002F32C /* ingresar.png */; };
 		6AEEE13F1B5824090002F32C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AEEE13E1B5824090002F32C /* 2.png */; };
+		6AF10FF11B6945F9005EDAB8 /* segey_ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FF01B6945F9005EDAB8 /* segey_ico.png */; };
+		6AF10FF31B694AC2005EDAB8 /* segey_ico_1242.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FF21B694AC2005EDAB8 /* segey_ico_1242.png */; };
+		6AF10FF51B694ACA005EDAB8 /* segey_ico_750.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FF41B694ACA005EDAB8 /* segey_ico_750.png */; };
+		6AF10FF71B694F14005EDAB8 /* verde2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FF61B694F14005EDAB8 /* verde2.png */; };
+		6AF10FFB1B6C22D8005EDAB8 /* glyphicons-204-lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FF91B6C22D8005EDAB8 /* glyphicons-204-lock.png */; };
+		6AF10FFC1B6C22D8005EDAB8 /* glyphicons-4-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FFA1B6C22D8005EDAB8 /* glyphicons-4-user.png */; };
+		6AF10FFE1B6C2C5A005EDAB8 /* logo_segey.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AF10FFD1B6C2C5A005EDAB8 /* logo_segey.png */; };
 		724CF4E21B50475C009F1072 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724CF4E11B50475C009F1072 /* Date.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +96,13 @@
 		6AED3AE41B5978E90062131C /* Verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Verde.png; sourceTree = "<group>"; };
 		6AEEE13C1B58145B0002F32C /* ingresar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ingresar.png; sourceTree = "<group>"; };
 		6AEEE13E1B5824090002F32C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		6AF10FF01B6945F9005EDAB8 /* segey_ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segey_ico.png; sourceTree = "<group>"; };
+		6AF10FF21B694AC2005EDAB8 /* segey_ico_1242.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segey_ico_1242.png; sourceTree = "<group>"; };
+		6AF10FF41B694ACA005EDAB8 /* segey_ico_750.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = segey_ico_750.png; sourceTree = "<group>"; };
+		6AF10FF61B694F14005EDAB8 /* verde2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verde2.png; sourceTree = "<group>"; };
+		6AF10FF91B6C22D8005EDAB8 /* glyphicons-204-lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-204-lock.png"; sourceTree = "<group>"; };
+		6AF10FFA1B6C22D8005EDAB8 /* glyphicons-4-user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-4-user.png"; sourceTree = "<group>"; };
+		6AF10FFD1B6C2C5A005EDAB8 /* logo_segey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_segey.png; sourceTree = "<group>"; };
 		724CF4E11B50475C009F1072 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,13 +205,17 @@
 		183A36431B4EFA4A00178E1A /* Imagenes */ = {
 			isa = PBXGroup;
 			children = (
+				6AF10FF81B6C22D8005EDAB8 /* login */,
 				183A36441B4EFA6700178E1A /* smartphone-message-send-icon.png */,
 				183A36451B4EFA6700178E1A /* logoSegey.png */,
 				183A36461B4EFA6700178E1A /* splash 3X-2.png */,
 				6AEEE13C1B58145B0002F32C /* ingresar.png */,
 				6AEEE13E1B5824090002F32C /* 2.png */,
 				183A36471B4EFA6700178E1A /* splash 3X.jpg */,
+				6AF10FF21B694AC2005EDAB8 /* segey_ico_1242.png */,
 				183A36481B4EFA6700178E1A /* splash 3X.png */,
+				6AF10FF01B6945F9005EDAB8 /* segey_ico.png */,
+				6AF10FF41B694ACA005EDAB8 /* segey_ico_750.png */,
 				183A36491B4EFA6700178E1A /* splash.png */,
 			);
 			name = Imagenes;
@@ -222,9 +240,20 @@
 			children = (
 				6AED3AE21B5978E90062131C /* Ambar.png */,
 				6AED3AE31B5978E90062131C /* Rojo.png */,
+				6AF10FF61B694F14005EDAB8 /* verde2.png */,
 				6AED3AE41B5978E90062131C /* Verde.png */,
 			);
 			path = Status;
+			sourceTree = "<group>";
+		};
+		6AF10FF81B6C22D8005EDAB8 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				6AF10FF91B6C22D8005EDAB8 /* glyphicons-204-lock.png */,
+				6AF10FFD1B6C2C5A005EDAB8 /* logo_segey.png */,
+				6AF10FFA1B6C22D8005EDAB8 /* glyphicons-4-user.png */,
+			);
+			path = login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,21 +337,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AED3ADA1B5973040062131C /* Contestado I.png in Resources */,
+				6AF10FFC1B6C22D8005EDAB8 /* glyphicons-4-user.png in Resources */,
 				6AED3ADD1B5973040062131C /* Pendiente II.png in Resources */,
 				6AEEE13F1B5824090002F32C /* 2.png in Resources */,
 				6AED3AE51B5978E90062131C /* Ambar.png in Resources */,
 				183A36231B4EF0E000178E1A /* Principal.storyboard in Resources */,
 				183A364C1B4EFA6700178E1A /* splash 3X-2.png in Resources */,
+				6AF10FF51B694ACA005EDAB8 /* segey_ico_750.png in Resources */,
+				6AF10FFB1B6C22D8005EDAB8 /* glyphicons-204-lock.png in Resources */,
 				183A364B1B4EFA6700178E1A /* logoSegey.png in Resources */,
+				6AF10FF71B694F14005EDAB8 /* verde2.png in Resources */,
+				6AF10FF11B6945F9005EDAB8 /* segey_ico.png in Resources */,
 				6AED3AE01B5973040062131C /* Thumbs.db in Resources */,
 				183A364D1B4EFA6700178E1A /* splash 3X.jpg in Resources */,
 				183A364A1B4EFA6700178E1A /* smartphone-message-send-icon.png in Resources */,
 				6AED3ADC1B5973040062131C /* Pendiente 1.png in Resources */,
 				6AED3ADB1B5973040062131C /* Contestado II.png in Resources */,
+				6AF10FF31B694AC2005EDAB8 /* segey_ico_1242.png in Resources */,
 				6AED3ADE1B5973040062131C /* recepcionado I.png in Resources */,
 				183A364E1B4EFA6700178E1A /* splash 3X.png in Resources */,
 				6AED3AE71B5978E90062131C /* Verde.png in Resources */,
 				6AED3ADF1B5973040062131C /* Recepcionado II.png in Resources */,
+				6AF10FFE1B6C2C5A005EDAB8 /* logo_segey.png in Resources */,
 				6AEEE13D1B58145B0002F32C /* ingresar.png in Resources */,
 				183A364F1B4EFA6700178E1A /* splash.png in Resources */,
 				6AED3AE61B5978E90062131C /* Rojo.png in Resources */,

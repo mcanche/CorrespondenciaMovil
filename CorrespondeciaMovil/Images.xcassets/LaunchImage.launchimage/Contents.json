@@ -4,25 +4,24 @@
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "736h",
-      "filename" : "splash.png",
+      "filename" : "segey_ico_1242.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "3x"
     },
     {
-      "extent" : "full-screen",
-      "idiom" : "iphone",
-      "subtype" : "736h",
-      "filename" : "splash 3X-1.png",
-      "minimum-system-version" : "8.0",
       "orientation" : "landscape",
+      "idiom" : "iphone",
+      "extent" : "full-screen",
+      "minimum-system-version" : "8.0",
+      "subtype" : "736h",
       "scale" : "3x"
     },
     {
       "extent" : "full-screen",
       "idiom" : "iphone",
       "subtype" : "667h",
-      "filename" : "splash 3X.png",
+      "filename" : "segey_ico_750.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
       "scale" : "2x"
