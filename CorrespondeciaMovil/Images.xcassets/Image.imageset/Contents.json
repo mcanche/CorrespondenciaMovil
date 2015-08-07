@@ -2,17 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "segey_ico.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "splash.png"
+      "filename" : "segey_ico-2.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "splash 3X.png"
+      "filename" : "segey_ico-1.png"
     }
   ],
   "info" : {
