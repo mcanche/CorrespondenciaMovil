@@ -75,7 +75,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="RDN-Yf-IOx" kind="show" identifier="verDoctos" id="ow9-xA-Hv4"/>
+                                    <action selector="ingresar:" destination="TKF-rj-oPB" eventType="touchUpInside" id="yQy-y6-jUE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98h-3Q-WFQ">
@@ -108,10 +108,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wMT-QM-pLu"/>
+                    <connections>
+                        <segue destination="RDN-Yf-IOx" kind="show" identifier="verDoctos" id="Ize-YE-ccS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cny-9O-hpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505" y="58"/>
+            <point key="canvasLocation" x="1501" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y2Q-91-XVj">

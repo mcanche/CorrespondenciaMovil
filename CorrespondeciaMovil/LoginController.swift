@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginController: UIViewController
 {
+    
+    let urllogin = "http://correomx.raycastudio.com.mx/cas/login.php"
+    let jsonexito = "sucess"
+    let jsonusuario = "username"
+    let jsonpwd = "password"
     
     override func viewDidLoad()
     {
@@ -35,6 +41,35 @@ class LoginController: UIViewController
         _textField.resignFirstResponder()
         return true
     }
+    
+    func iniciarSesion()
+    {
+        let parametros =
+        [
+            "username" : "wilbert.echeverria",
+            "password" : "12345678"
+        ]
+        
+        Alamofire.request(.POST, urllogin,parameters: parametros).responseJSON()
+        {
+            (_, _, JSON, error) in
+            if error == nil
+            {
+                let info =  JSON as! NSDictionary
+                println(info["message"] as? String)
+            }
+            else
+            {
+                println(error)
+            }
+        }
+    }
+    
+    @IBAction func ingresar(sender: UIButton)
+    {
+        iniciarSesion()
+    }
+    
     /*
     // MARK: - Navigation
 
