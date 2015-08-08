@@ -6,6 +6,54 @@
 //  Copyright (c) 2015 mcanche. All rights reserved.
 //
 
+enum Perfiles
+{
+    /*Valores del enum*/
+    case NOPERMITIDO( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case ADMINISTRADOR( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case SECRETARIADIRECCION( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case SECRETARIADEPARTAMENTO( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case VALIDADOR( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case MANTENIMIENTO( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case TESTER( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    case JEFEDEPTO( _id: Int8, _valido: Bool, _validador: Bool , _jefe: Bool)
+    /*Constructores*/
+    init()
+    {
+        self = .NOPERMITIDO(_id: 0, _valido: false, _validador: false, _jefe: false)
+    }
+    init(_perfilid: Int8)
+    {
+        switch(_perfilid)
+        {
+        case 1:
+            self =  .ADMINISTRADOR(_id: 1, _valido: false, _validador: false, _jefe: false)
+            break
+        case 2:
+            self = .SECRETARIADIRECCION(_id: 2, _valido: false, _validador: false, _jefe: false)
+            break
+        case 3:
+            self = .SECRETARIADEPARTAMENTO(_id: 3, _valido: false, _validador: false, _jefe: false)
+            break
+        case 4:
+            self =  .VALIDADOR(_id: 4, _valido: true, _validador: true, _jefe: false)
+            break
+        case 5:
+            self = .MANTENIMIENTO(_id: 5, _valido: false, _validador: false, _jefe: false)
+            break
+        case 6:
+            self = .TESTER(_id: 6, _valido: false, _validador: false, _jefe: false)
+            break
+        case 7:
+            self = .JEFEDEPTO(_id: 7, _valido: true, _validador: false, _jefe: true)
+            break
+        default:
+            self =  .NOPERMITIDO(_id: 0, _valido: false, _validador: false, _jefe: false)
+            break
+        }
+    }
+}
+
 enum TituloPersonal : Int8
 {
     /*Valores del enum*/
@@ -64,6 +112,13 @@ enum TipoFila : Int8
     }
 }
 
+public enum Estado : Int8
+{
+    /*Valores del enum*/
+    case EXITO = 1
+    case ERROR = 0
+}
+
 public enum Estatus
 {
     case RECEPCIONADO(_id: Int8, _icon: String, _leyenda: String, _color: Int)
@@ -73,7 +128,7 @@ public enum Estatus
     /*Constructores*/
     init()
     {
-        self = Estatus.RECEPCIONADO(_id: 1, _icon: "recepcion", _leyenda: "Documentos recepcionados", _color: 0xFFF08080)
+        self = .RECEPCIONADO(_id: 1, _icon: "recepcion", _leyenda: "Documentos recepcionados", _color: 0xFFF08080)
     }
     
     init(_tipo: Int8)

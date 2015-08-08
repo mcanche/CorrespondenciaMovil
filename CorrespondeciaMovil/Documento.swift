@@ -13,42 +13,25 @@ import Foundation
 
 class Documento
 {
-    /*
-    /*Propiedades de clase*/
-    private static final String ETIQUETARES_FOLIO = "etiqueta_folio";
-    private static final String ETIQUETARES_ANIO = "etiqueta_anio";
-    private static final String ETIQUETARES_OFICIO = "etiqueta_oficio";
-    private static final String ETIQUETARES_IDESTATUS = "etiqueta_idestatus";
-    private static final String ETIQUETARES_ESTATUS = "etiqueta_estatus";
-    private static final String ETIQUETARES_ASUNTO = "etiqueta_asunto";
-    private static final String ETIQUETARES_SOLICITUD = "etiqueta_solicitud";
-    private static final String ETIQUETARES_SOLICITUDABR = "etiqueta_solicitudabr";
-    private static final String ETIQUETARES_RECEPCION = "etiqueta_recepcion";
-    private static final String ETIQUETARES_RECEPCIONABR = "etiqueta_recepcionabr";
-    private static final String ETIQUETARES_IDNIVEL = "etiqueta_idnivel";
-    private static final String ETIQUETARES_NIVEL = "etiqueta_nivel";
-    private static final String ETIQUETARES_IDDEPTO = "etiqueta_iddepto";
-    private static final String ETIQUETARES_DEPTO = "etiqueta_depto";
-    */
     /*Propiedades de objeto*/
     /*Propiedades de controls*/
-    var tipo: TipoFila;
-    var fondo: Bool = false;
+    private var tipo: TipoFila;
+    private var fondo: Bool = false;
     /*Propiedades del objeto*/
-    var folio: Int ;
-    var of_sol: Int ;
-    var asunto: String ;
-    var idestatus: Estatus ;
-    var estatus: String;
-    var anio: Int;
-    var solicitud: NSDate;
-    var recepcion: NSDate;
-    var idnivel: Int;
-    var nivel: String;
-    var iddepto: Int;
-    var depto: String ;
-    var respuesta: String;
-    var fecharespuesta: String;
+    private var folio: Int ;
+    private var of_sol: Int ;
+    private var asunto: String ;
+    private var idestatus: Estatus ;
+    private var estatus: String;
+    private var anio: Int;
+    private var solicitud: NSDate;
+    private var recepcion: NSDate;
+    private var idnivel: Int;
+    private var nivel: String;
+    private var iddepto: Int;
+    private var depto: String ;
+    private var respuesta: String;
+    private var fecharespuesta: String;
     /*Funciones getters and setters*/
     func setTipo( _tipo: TipoFila )
     {
@@ -238,50 +221,10 @@ class Documento
     }
     func getSolicitudFechaFormateada() -> String
     {
-        return self.formatearFecha(self.solicitud);
+        return Date.formatearFecha(self.solicitud);
     }
     func getRecepcionFechaFormateada() -> String
     {
-        return self.formatearFecha(self.recepcion);
-    }
-    func formatearFecha(_fecha: NSDate?) -> String
-    {
-        var cadfecha: String = "";
-        var nommeses: NombresMeses = NombresMeses();
-        
-        if _fecha != nil
-        {
-            let df: NSDateFormatter = NSDateFormatter();
-            
-            var flags : NSCalendarUnit = NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear;
-            let date = NSDate();
-            let components = NSCalendar.currentCalendar().components(flags, fromDate: _fecha!);
-            
-            let anio = components.year;
-            let mes = components.month;
-            let dia = components.day;
-            var caddia = dia < 10 ? "0\(dia)" : "\(dia)";
-            
-            cadfecha = "\(caddia)-\(nommeses.meses[mes])-\(dia)";
-        }
-        
-        return cadfecha;
-    }
-
-}
-
-class NombresMeses
-{
-    var meses: [String] =
-    [
-        "Ene","Feb","Mar",
-        "Abr","May","Jun",
-        "Jul","Ago","Sep",
-        "Oct","Nov","Dic"
-    ]
-    
-    init()
-    {
-        
+        return Date.formatearFecha(self.recepcion);
     }
 }

@@ -19,21 +19,21 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-eb-u5w">
-                                <rect key="frame" x="156" y="166" width="428" height="30"/>
+                                <rect key="frame" x="154" y="177" width="430" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-Ui-hJX">
-                                <rect key="frame" x="20" y="229" width="121" height="27"/>
+                                <rect key="frame" x="20" y="232" width="93" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dZX-Ui-hJX" secondAttribute="height" multiplier="94:21" id="GGn-eq-8XB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LaQ-Gy-O0y">
-                                <rect key="frame" x="156" y="223" width="428" height="30"/>
+                                <rect key="frame" x="154" y="234" width="430" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="T1j-5V-t7I"/>
                                 </constraints>
@@ -47,13 +47,13 @@
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98h-3Q-WFQ">
-                                <rect key="frame" x="20" y="172" width="66" height="27"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                <rect key="frame" x="20" y="183" width="64" height="19"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdA-2C-Cm9">
-                                <rect key="frame" x="220" y="276" width="160" height="35"/>
+                                <rect key="frame" x="220" y="287" width="160" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.43860505760000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Fcb-ac-D08"/>
@@ -78,30 +78,30 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-4-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ah-dwk">
-                                <rect key="frame" x="126" y="174" width="15" height="16"/>
+                                <rect key="frame" x="124" y="185" width="15" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="e7V-IZ-8Ew"/>
                                     <constraint firstAttribute="height" constant="16" id="gSe-yB-tNY"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-204-lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-Zr-wuO">
-                                <rect key="frame" x="130" y="230" width="11" height="13"/>
+                                <rect key="frame" x="128" y="241" width="11" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="11" id="Gf5-QR-bnn"/>
                                     <constraint firstAttribute="height" constant="13" id="X5f-sa-dY8"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_segey.png" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-gv-XAu">
-                                <rect key="frame" x="214" y="371" width="172" height="81"/>
+                                <rect key="frame" x="214" y="382" width="172" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="bhN-Ab-1eT"/>
                                     <constraint firstAttribute="height" constant="81" id="kW2-7Q-zvs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control de Correspondencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpH-bt-ykr">
-                                <rect key="frame" x="10" y="104" width="580" height="22"/>
+                                <rect key="frame" x="10" y="104" width="580" height="33"/>
                                 <color key="backgroundColor" red="1" green="0.90774152600000002" blue="0.2094633524" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>

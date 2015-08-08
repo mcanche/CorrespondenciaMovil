@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let urlservidor = "http://correomx.raycastudio.com.mx/cas";
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

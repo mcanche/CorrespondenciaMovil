@@ -16,7 +16,7 @@ class DoctosDeptoPend: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        datosPruebas()
+        //datosPruebas()
     }
     
     override func viewDidAppear(animated: Bool)

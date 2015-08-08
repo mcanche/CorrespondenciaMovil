@@ -9,40 +9,53 @@
 import UIKit
 import Alamofire
 
+/*
+doctos get_all_oficiosarespuesta.php
+doctosresp update_oficiorespuesta.php
+resumen get_reporte_semana.php
+*/
+
 class LoginController: UIViewController
 {
-    
     @IBOutlet weak var objusuario: UITextField!
     @IBOutlet weak var objpass: UITextField!
     
-    let urllogin = "http://correomx.raycastudio.com.mx/cas/login.php"
-    let jsonexito = "sucess"
+    let urllogin = "\(urlservidor)/login.php"
+    let jsonexito = "success"
     let jsonusuario = "username"
     let jsonpwd = "password"
+    
+    var usuario: Usuario = Usuario();
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
     //Funciones touch
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
     {
         self.view.endEditing(true)
     }
-    
     //UITextFieldDelegate
     func textFieldShouldReturn(_textField: UITextField) -> Bool
     {
         _textField.resignFirstResponder()
         return true
+    }
+    /*Funciones personalizadas del sistema*/
+    func mensajeError()
+    {
+        //Código cortesía de:
+        //http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift
+        let controladoralerta = UIAlertController(title: "Correspondencia Movil: Inicio de sesión", message:
+            "Imposible realizar la conexión. Verifique su usuario y/o contraseña e intente de nuevo.", preferredStyle: UIAlertControllerStyle.Alert)
+        controladoralerta.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(controladoralerta, animated: true, completion: nil)
     }
     
     func iniciarSesion()
@@ -52,38 +65,47 @@ class LoginController: UIViewController
             jsonusuario : objusuario.text,
             jsonpwd : objpass.text
         ]
-        
         Alamofire.request(.POST, urllogin,parameters: parametros).responseJSON()
         {
             (_, _, JSON, error) in
             if error == nil
             {
                 let info =  JSON as! NSDictionary
-                println(info["message"] as? String)
-                self.performSegueWithIdentifier("verDoctos", sender: nil)
+                var exito: Int = (info[self.jsonexito] as? Int)!
+                if( exito == Int(Estado.EXITO.rawValue) )
+                {
+                    self.leerDatosUsuario();
+                    self.performSegueWithIdentifier("verDoctos", sender: nil)
+                }
+                else
+                {
+                    self.mensajeError()
+                }
             }
             else
             {
-                println(error)
+                self.mensajeError()
             }
         }
     }
-    
+    //Funciones de controles UI
     @IBAction func ingresar(sender: UIButton)
     {
-        
         iniciarSesion()
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func leerDatosUsuario()
+    {
+        self.usuario.setUsuario(objusuario.text);
+        self.usuario.setContrasena(objpass.text);
+        self.usuario.leerDatosUsuario();
     }
-    */
+    //
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        
+    }
 
 }
