@@ -30,8 +30,6 @@ class Documento
     private static final String ETIQUETARES_IDDEPTO = "etiqueta_iddepto";
     private static final String ETIQUETARES_DEPTO = "etiqueta_depto";
     */
-    
-    
     /*Propiedades de objeto*/
     /*Propiedades de controls*/
     var tipo: TipoFila;
@@ -51,293 +49,227 @@ class Documento
     var depto: String ;
     var respuesta: String;
     var fecharespuesta: String;
-    /*
-    /*
-    /*Propiedades que guardan las etiquetas*/
-    private String folioetiq="";
-    private String of_soletiq="";
-    private String asuntoetiq="";
-    private String idestatusetiq="";
-    private String estatusetiq="";
-    private String anioetiq="";
-    private String solicitudetiq="";
-    private String solicitudetiqabr="";
-    private String recepcionetiq="";
-    private String recepcionetiqabr="";
-    private String idniveletiq="";
-    private String niveletiq="";
-    private String iddeptoetiq="";
-    private String deptoetiq="";
     /*Funciones getters and setters*/
-    public void setTipo(Enumerados.TipoFila _tipo)
+    func setTipo( _tipo: TipoFila )
     {
-    this.tipo=_tipo;
+      self.tipo=_tipo;
     }
-    public Enumerados.TipoFila getTipo()
+    func getTipo() -> TipoFila
     {
-    return this.tipo;
+        return self.tipo;
     }
-    public void setFolio(Integer _folio)
+    func setFolio( _folio: Int)
     {
-    this.folio=_folio;
+        self.folio=_folio;
     }
-    public Integer getFolio()
+    func getFolio() -> Int
     {
-    return this.folio;
+        return self.folio;
     }
-    public void setOf_sol(Integer _of_sol)
+    func setOf_sol( _of_sol: Int)
     {
-    this.of_sol=_of_sol;
+        self.of_sol=_of_sol;
     }
-    public Integer getOf_sol()
+    func getOf_sol() -> Int
     {
-    return this.of_sol;
+        return self.of_sol;
     }
-    public void setAnio(Integer _anio)
+    func setAnio( _anio: Int)
     {
-    this.anio=_anio;
+        self.anio=_anio;
     }
-    public Integer getAnio()
+    func getAnio() -> Int
     {
-    return this.anio;
+        return self.anio;
     }
-    public void setAsunto(String _asunto)
+    func setAsunto( _asunto: String)
     {
-    this.asunto=_asunto;
+        self.asunto=_asunto;
     }
-    public String getAsunto()
+    func getAsunto() -> String
     {
-    return this.asunto;
+        return self.asunto;
     }
-    public void setEstatus(String _estatus)
+    func setEstatus( _estatus: String)
     {
-    this.estatus=_estatus;
+        self.estatus=_estatus;
     }
-    public String getEstatus()
+    func getEstatus() -> String
     {
-    return this.estatus;
+        return self.estatus;
     }
-    public void setIdestatus(Byte _idestatus)
+    func setIdestatus( _idestatus: Int8)
     {
-    this.idestatus=Enumerados.Estatus.leerIDEstatus(_idestatus);
+        self.idestatus=Estatus(_tipo: _idestatus);
     }
-    public Enumerados.Estatus getIdestatus()
+    func getIdestatus() -> Estatus
     {
-    return this.idestatus;
+        return self.idestatus;
     }
-    public void setSolicitud(GregorianCalendar _solicitud)
+    func setSolicitud( _solicitud: NSDate)
     {
-    this.solicitud=_solicitud;
+        self.solicitud=_solicitud;
     }
-    public GregorianCalendar getSolicitud()
+    func getSolicitud() -> NSDate
     {
-    return this.solicitud;
+        return self.solicitud;
     }
-    public void setRecepcion(GregorianCalendar _recepcion)
+    func setRecepcion( _recepcion: NSDate)
     {
-    this.recepcion=_recepcion;
+        self.recepcion=_recepcion;
     }
-    public GregorianCalendar getRecepcion()
+    func getRecepcion() -> NSDate
     {
-    return this.recepcion;
+        return self.recepcion;
     }
-    public void setIdnivel(Integer _idnivel)
+    func setIdnivel( _idnivel: Int)
     {
-    this.idnivel=_idnivel;
+        self.idnivel=_idnivel;
     }
-    public Integer getIdnivel()
+    func getIdnivel() -> Int
     {
-    return this.idnivel;
+        return self.idnivel;
     }
-    public void setNivel(String _nivel)
+    func setNivel( _nivel: String)
     {
-    this.nivel=_nivel;
+        self.nivel=_nivel;
     }
-    public String getNivel()
+    func getNivel() -> String
     {
-    return this.nivel;
+        return self.nivel;
     }
-    public void setIDdepto(Integer _iddepto)
+    func setIDdepto( _iddepto: Int)
     {
-    this.iddepto=_iddepto;
+        self.iddepto=_iddepto;
     }
-    public Integer getIDdepto()
+    func getIDdepto() -> Int
     {
-    return this.iddepto;
+        return self.iddepto;
     }
-    public void setDepto(String _depto)
+    func setDepto( _depto: String)
     {
-    this.depto=_depto;
+        self.depto=_depto;
     }
-    public String getDepto()
+    func getDepto() -> String
     {
-    return this.depto;
+        return self.depto;
     }
-    public void setFondo(boolean _fondo)
+    func setFondo( _fondo: Bool)
     {
-    this.fondo=_fondo;
+        self.fondo=_fondo;
     }
-    public boolean getFondo()
+    func getFondo() -> Bool
     {
-    return this.fondo;
+        return self.fondo;
     }
-    public String getRespuesta()
+    func getRespuesta() -> String
     {
-    return this.respuesta;
+        return self.respuesta;
     }
-    public void setRespuesta(String _respuesta)
+    func setRespuesta( _respuesta: String)
     {
-    this.respuesta=_respuesta;
+        self.respuesta=_respuesta;
     }
-    public String getFechaRespuesta()
+    func getFechaRespuesta() -> String
     {
-    return this.fecharespuesta;
+        return self.fecharespuesta;
     }
-    public void setFechaRespuesta(String _fecharespuesta)
+    func setFechaRespuesta( _fecharespuesta: String)
     {
-    this.fecharespuesta=_fecharespuesta;
-    }
-    /*Getters de etiquetas*/
-    public String getEtiquetaFolio()
-    {
-    return this.folioetiq;
-    }
-    public String getEtiquetaOficio()
-    {
-    return this.of_soletiq;
-    }
-    public String getEtiquetaAsunto()
-    {
-    return this.asuntoetiq;
-    }
-    public String getEtiquetaIdestatus()
-    {
-    return this.idestatusetiq;
-    }
-    public String getEtiquetaEstatus()
-    {
-    return this.estatusetiq;
-    }
-    public String getEtiquetaAnio()
-    {
-    return this.anioetiq;
-    }
-    public String getEtiquetaSolicitud()
-    {
-    return this.solicitudetiq;
-    }
-    public String getEtiquetaSolicitudabr()
-    {
-    return this.solicitudetiqabr;
-    }
-    public String getEtiquetaRecepcion()
-    {
-    return this.recepcionetiq;
-    }
-    public  String getEtiquetaRecepcionabr()
-    {
-    return this.recepcionetiqabr;
-    }
-    public String getEtiquetaIdnivel()
-    {
-    return this.idniveletiq;
-    }
-    public String getEtiquetaNivel()
-    {
-    return this.niveletiq;
-    }
-    public String getEtiquetaIdDepto()
-    {
-    return this.iddeptoetiq;
-    }
-    public String getEtiquetaDepto()
-    {
-    return this.deptoetiq;
+        self.fecharespuesta=_fecharespuesta;
     }
     /*Contructores/destructores*/
     /*
     Constructor por defecto
     */
-    public Documento()
+    init()
     {
-    inicializarEtiquetas();
+        tipo = TipoFila(_tipo: 1);
+        fondo = false;
+        /*Propiedades del objeto*/
+        folio = 0 ;
+        of_sol = 0 ;
+        asunto = "";
+        idestatus = Estatus(_tipo: 1) ;
+        estatus = "";
+        anio = 0
+        solicitud = Date.from(year: 1978, month: 01, day: 01);
+        recepcion = Date.from(year: 1978, month: 01, day: 01);
+        idnivel = 0;
+        nivel = "";
+        iddepto = 0;
+        depto = "";
+        respuesta = "";
+        fecharespuesta = "";
     }
-    public Documento(
-    Integer _folio, Integer _anio, Integer _of_sol,
-    Byte _idestatus, String _estatus, String _asunto,
-    GregorianCalendar _solicitud, GregorianCalendar _recepcion,
-    Integer _idnivel, String _nivel,
-    Integer _iddepto, String _depto,
-    Enumerados.TipoFila _tipo
+    init(
+        _folio: Int, _anio: Int, _of_sol: Int,
+        _idestatus: Int8, _estatus: String, _asunto: String,
+        _solicitud: NSDate, _recepcion: NSDate,
+        _idnivel: Int, _nivel: String,
+        _iddepto: Int, _depto: String,
+        _tipo: TipoFila
     )
     {
-    this.folio=_folio;
-    this.anio=_anio;
-    this.of_sol=_of_sol;
-    this.idestatus=Enumerados.Estatus.leerIDEstatus(_idestatus);
-    this.estatus=_estatus;
-    this.asunto=_asunto;
-    this.solicitud=_solicitud;
-    this.recepcion=_recepcion;
-    this.idnivel=_idnivel;
-    this.nivel=_nivel;
-    this.iddepto=_iddepto;
-    this.depto=_depto;
-    this.tipo=_tipo;
-    this.inicializarEtiquetas();
+    self.folio=_folio;
+    self.anio=_anio;
+    self.of_sol=_of_sol;
+    self.idestatus=Estatus(_tipo: _idestatus);
+    self.estatus=_estatus;
+    self.asunto=_asunto;
+    self.solicitud=_solicitud;
+    self.recepcion=_recepcion;
+    self.idnivel=_idnivel;
+    self.nivel=_nivel;
+    self.iddepto=_iddepto;
+    self.depto=_depto;
+    self.tipo=_tipo;
+    /*Propiedades adicionales*/
+    self.fondo = false;
+    self.respuesta = "";
+    self.fecharespuesta = "";
     }
     /*
     Funciones del objeto
     */
-    public String getFolioCompleto()
+    func getFolioCompleto() -> String
     {
-    return String.valueOf(this.folio)+"/"+String.valueOf(this.anio);
+        return "\(self.folio)/\(self.anio)";
     }
-    public String getSolicitudFechaFormateada()
+    func getSolicitudFechaFormateada() -> String
     {
-    return this.formatearFecha(this.solicitud);
+        return self.formatearFecha(self.solicitud);
     }
-    public String getRecepcionFechaFormateada()
+    func getRecepcionFechaFormateada() -> String
     {
-    return this.formatearFecha(this.recepcion);
+        return self.formatearFecha(self.recepcion);
     }
-    private void inicializarEtiquetas()
+    func formatearFecha(_fecha: NSDate?) -> String
     {
-    //Recursos.leerRecursoGrafico(this.context, ETIQUETA_FONDONORMAL);
-    this.folioetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_FOLIO);
-    this.of_soletiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_OFICIO);
-    this.asuntoetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_ASUNTO);
-    this.idestatusetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_IDESTATUS);
-    this.estatusetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_ESTATUS);;
-    this.anioetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_ANIO);
-    this.solicitudetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_SOLICITUD);
-    this.solicitudetiqabr= Recursos.leerValorRecurso(this.context, ETIQUETARES_SOLICITUDABR);
-    this.recepcionetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_RECEPCION);
-    this.recepcionetiqabr= Recursos.leerValorRecurso(this.context, ETIQUETARES_RECEPCIONABR);
-    this.idniveletiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_IDNIVEL);
-    this.niveletiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_NIVEL);
-    this.iddeptoetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_IDDEPTO);
-    this.deptoetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_DEPTO);
-    this.anioetiq= Recursos.leerValorRecurso(this.context, ETIQUETARES_ANIO);
-    }
-    private String formatearFecha(GregorianCalendar _fecha)
-    {
-    String cadfecha="";
-    Integer dia=0;
-    
-    if( _fecha != null )
-    {
-    dia=_fecha.get(Calendar.DAY_OF_MONTH);
-    cadfecha = dia<10 ? "0" + String.valueOf(dia) : String.valueOf(dia);
-    cadfecha += NombresMeses.meses[_fecha.get(Calendar.MONTH)];
-    cadfecha += "-"+String.valueOf(_fecha.get(Calendar.YEAR));
-    }
-    
-    return cadfecha;
+        var cadfecha: String = "";
+        var nommeses: NombresMeses = NombresMeses();
+        
+        if _fecha != nil
+        {
+            let df: NSDateFormatter = NSDateFormatter();
+            
+            var flags : NSCalendarUnit = NSCalendarUnit.CalendarUnitDay | NSCalendarUnit.CalendarUnitMonth | NSCalendarUnit.CalendarUnitYear;
+            let date = NSDate();
+            let components = NSCalendar.currentCalendar().components(flags, fromDate: _fecha!);
+            
+            let anio = components.year;
+            let mes = components.month;
+            let dia = components.day;
+            var caddia = dia < 10 ? "0\(dia)" : "\(dia)";
+            
+            cadfecha = "\(caddia)-\(nommeses.meses[mes])-\(dia)";
+        }
+        
+        return cadfecha;
     }
 
-    */
 }
+
 class NombresMeses
 {
     var meses: [String] =
@@ -353,4 +285,3 @@ class NombresMeses
         
     }
 }
-

@@ -37,8 +37,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="T1j-5V-t7I"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="T1j-5V-t7I"/>
@@ -139,6 +140,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="wMT-QM-pLu"/>
                     <connections>
+                        <outlet property="objpass" destination="LaQ-Gy-O0y" id="oYN-u7-Ltp"/>
+                        <outlet property="objusuario" destination="aqZ-eb-u5w" id="2z5-zx-ke7"/>
                         <segue destination="RDN-Yf-IOx" kind="show" identifier="verDoctos" id="Ize-YE-ccS"/>
                     </connections>
                 </viewController>

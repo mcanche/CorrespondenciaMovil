@@ -12,6 +12,9 @@ import Alamofire
 class LoginController: UIViewController
 {
     
+    @IBOutlet weak var objusuario: UITextField!
+    @IBOutlet weak var objpass: UITextField!
+    
     let urllogin = "http://correomx.raycastudio.com.mx/cas/login.php"
     let jsonexito = "sucess"
     let jsonusuario = "username"
@@ -46,8 +49,8 @@ class LoginController: UIViewController
     {
         let parametros =
         [
-            "username" : "wilbert.echeverria",
-            "password" : "12345678"
+            jsonusuario : objusuario.text,
+            jsonpwd : objpass.text
         ]
         
         Alamofire.request(.POST, urllogin,parameters: parametros).responseJSON()
@@ -57,6 +60,7 @@ class LoginController: UIViewController
             {
                 let info =  JSON as! NSDictionary
                 println(info["message"] as? String)
+                self.performSegueWithIdentifier("verDoctos", sender: nil)
             }
             else
             {
@@ -67,7 +71,9 @@ class LoginController: UIViewController
     
     @IBAction func ingresar(sender: UIButton)
     {
+        
         iniciarSesion()
+        
     }
     
     /*
