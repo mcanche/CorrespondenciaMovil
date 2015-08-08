@@ -27,6 +27,7 @@
 		183FFAE01B75AA0C00275A81 /* Nivel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FFADF1B75AA0C00275A81 /* Nivel.swift */; };
 		183FFAE21B75AC3E00275A81 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FFAE11B75AC3E00275A81 /* Perfil.swift */; };
 		183FFAE51B760F3F00275A81 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FFAE41B760F3F00275A81 /* Usuario.swift */; };
+		183FFAE71B765CCC00275A81 /* Mapeos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183FFAE61B765CCC00275A81 /* Mapeos.swift */; };
 		189B60A11B506DD600177535 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A01B506DD600177535 /* Documentos.swift */; };
 		189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */; };
 		189FB0ED1B63E67200F0A1C2 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 189FB0E91B63E49300F0A1C2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -120,6 +121,7 @@
 		183FFADF1B75AA0C00275A81 /* Nivel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nivel.swift; sourceTree = "<group>"; };
 		183FFAE11B75AC3E00275A81 /* Perfil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
 		183FFAE41B760F3F00275A81 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		183FFAE61B765CCC00275A81 /* Mapeos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapeos.swift; sourceTree = "<group>"; };
 		189B60A01B506DD600177535 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documentos.swift; path = ../Documentos.swift; sourceTree = "<group>"; };
 		189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDeptoPend.swift; sourceTree = "<group>"; };
 		189FB0E41B63E49300F0A1C2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../Alamo/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				183FFADF1B75AA0C00275A81 /* Nivel.swift */,
 				183FFAE11B75AC3E00275A81 /* Perfil.swift */,
 				183FFAE41B760F3F00275A81 /* Usuario.swift */,
+				183FFAE61B765CCC00275A81 /* Mapeos.swift */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183FFAE71B765CCC00275A81 /* Mapeos.swift in Sources */,
 				18EA99601B656A730028DDDB /* Documento.swift in Sources */,
 				18EA995E1B64733F0028DDDB /* Enumerados.swift in Sources */,
 				183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */,
