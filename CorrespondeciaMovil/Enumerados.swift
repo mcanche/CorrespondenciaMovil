@@ -22,7 +22,7 @@ enum Perfiles
     {
         self = .NOPERMITIDO(_id: 0, _valido: false, _validador: false, _jefe: false)
     }
-    init(_perfilid: Int8)
+    init(_perfilid: Int)
     {
         switch(_perfilid)
         {
@@ -51,6 +51,70 @@ enum Perfiles
             self =  .NOPERMITIDO(_id: 0, _valido: false, _validador: false, _jefe: false)
             break
         }
+    }
+    func getValido() -> Bool
+    {
+        var resultado: Bool = false
+        switch self
+        {
+        case .ADMINISTRADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .SECRETARIADIRECCION(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .SECRETARIADEPARTAMENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .VALIDADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .MANTENIMIENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .TESTER(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .JEFEDEPTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        case .NOPERMITIDO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _valido;
+            break;
+        }
+        return resultado;
+    }
+    func esValidador() -> Bool
+    {
+        var resultado: Bool = false
+        switch self
+        {
+        case .ADMINISTRADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .SECRETARIADIRECCION(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .SECRETARIADEPARTAMENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .VALIDADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .MANTENIMIENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .TESTER(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .JEFEDEPTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        case .NOPERMITIDO(let _id, let _valido, let _validador, let _jefe):
+            resultado = _validador;
+            break;
+        }
+        return resultado;
     }
 }
 

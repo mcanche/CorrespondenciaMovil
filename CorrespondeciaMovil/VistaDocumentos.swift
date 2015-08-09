@@ -11,7 +11,11 @@ import UIKit
 class VistaDocumentos: UITabBarController, MenuLateralDelegate
 {
     @IBOutlet weak var menuButton:UIBarButtonItem!
-    var menulat: MenuLateral = MenuLateral()
+    
+    private var menulat: MenuLateral = MenuLateral()
+    private var espera: UIAlertView = UIAlertView()
+    
+    var usuario: Usuario?;
     
     override func viewDidLoad()
     {
@@ -22,8 +26,11 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
         menulat = MenuLateral (_vistaoriginal: self.view, _elementosmenu: elementosmenu)
         menulat.delegado = self
         /*Fin de configuración del menú lateral*/
-        // Do any additional setup after loading the view.
+        //self.toolbarItems[1].enabled=false;
         
+        /*Habilitamos/ deshabilitamos la sección de pendientes*/
+        (self.tabBar.items![1] as! UITabBarItem).enabled = self.usuario!.getPerfil().getID().esValidador();
+
     }
 
     override func didReceiveMemoryWarning()

@@ -19,13 +19,18 @@ class LoginController: UIViewController
 {
     @IBOutlet weak var objusuario: UITextField!
     @IBOutlet weak var objpass: UITextField!
+    @IBOutlet weak var biniciarsesion: UIButton!
     
-    let urllogin = "\(urlservidor)/login.php"
-    let jsonexito = "success"
-    let jsonusuario = "username"
-    let jsonpwd = "password"
+    /************Identificadores segue************/
+    private var doctossegueid: String = "verDoctos";
     
-    var usuario: Usuario = Usuario();
+    private let urllogin = "\(urlservidor)/login.php"
+    private let jsonexito = "success"
+    private let jsonusuario = "username"
+    private let jsonpwd = "password"
+    private var usuario: Usuario = Usuario();
+    
+    private var espera: UIAlertView = UIAlertView()
     
     override func viewDidLoad()
     {
@@ -47,65 +52,99 @@ class LoginController: UIViewController
         return true
     }
     /*Funciones personalizadas del sistema*/
-    func mensajeError()
+    func mensajeError(_mensaje: String?)
     {
         //Código cortesía de:
         //http://www.ioscreator.com/tutorials/display-an-alert-view-in-ios8-with-swift
-        let controladoralerta = UIAlertController(title: "Correspondencia Movil: Inicio de sesión", message:
-            "Imposible realizar la conexión. Verifique su usuario y/o contraseña e intente de nuevo.", preferredStyle: UIAlertControllerStyle.Alert)
+        var mensaje: String = ""
+        if(_mensaje == nil)
+        {
+            mensaje = "Imposible realizar la conexión. Verifique su usuario y/o contraseña e intente de nuevo."
+        }
+        else
+        {
+            mensaje = _mensaje!
+        }
+        let controladoralerta = UIAlertController(title: "Correspondencia Movil: Inicio de sesión", message: mensaje, preferredStyle: UIAlertControllerStyle.Alert)
         controladoralerta.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.Default,handler: nil))
-        
+
         self.presentViewController(controladoralerta, animated: true, completion: nil)
     }
     
     func iniciarSesion()
     {
+        objusuario.text = "wilbert.echeverria"
+        objpass.text = "1234567"
+        
         let parametros =
         [
             jsonusuario : objusuario.text,
             jsonpwd : objpass.text
         ]
-        Alamofire.request(.POST, urllogin,parameters: parametros).responseJSON()
+        Alamofire.request(.POST, urllogin,parameters: parametros).validate().responseJSON()
         {
-            (_, _, JSON, error) in
-            if error == nil
+            (_, _response, _JSON, _error) in
+            if ( _error == nil )
             {
-                let info =  JSON as! NSDictionary
+                let info =  _JSON as! NSDictionary
                 var exito: Int = (info[self.jsonexito] as? Int)!
                 if( exito == Int(Estado.EXITO.rawValue) )
                 {
                     self.leerDatosUsuario();
-                    self.performSegueWithIdentifier("verDoctos", sender: nil)
                 }
                 else
                 {
-                    self.mensajeError()
+                    Espera.ocultarEspera(&self.espera);
+                    self.mensajeError(nil)
+                    self.biniciarsesion.enabled = true;
                 }
             }
             else
             {
-                self.mensajeError()
+                Espera.ocultarEspera(&self.espera);
+                self.mensajeError(nil)
             }
         }
     }
     //Funciones de controles UI
     @IBAction func ingresar(sender: UIButton)
     {
-        iniciarSesion()
+        //self.biniciarsesion.userInteractionEnabled = false;
+        self.biniciarsesion.enabled = false;
+        Espera.mostrarEspera(&self.espera,_mensaje: "Validando...")
+        self.iniciarSesion()
         
     }
     func leerDatosUsuario()
     {
         self.usuario.setUsuario(objusuario.text);
         self.usuario.setContrasena(objpass.text);
-        self.usuario.leerDatosUsuario();
+        self.usuario.leerDatosUsuario(self);
+
+    }
+    //Si es un perfil valido iniciamos el serge
+    func validarPerfilUsuario()
+    {
+        Espera.ocultarEspera(&self.espera);
+        if ( self.usuario.getPerfil().getID().getValido() )
+        {
+            self.performSegueWithIdentifier(self.doctossegueid, sender: nil)
+        }
+        else
+        {
+            self.mensajeError(self.usuario.getMensaje());
+        }
+        self.biniciarsesion.enabled = true;
     }
     //
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        
+        if(segue.identifier == self.doctossegueid)
+        {
+            let vistadocs : VistaDocumentos = segue.destinationViewController as! VistaDocumentos
+            vistadocs.usuario = self.usuario;
+        }
     }
 
 }

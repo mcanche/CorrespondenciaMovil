@@ -28,6 +28,8 @@ class Usuario
     private var perfil: Perfil?;
     private var nivel: Nivel?;
     private var depto: Depto?;
+    /**/
+    private var ocupado: Bool=false; //Realizando lecturas en el servidor
     
     /*Funciones Getters y setters*/
     func setUsuario( _usuario: String)
@@ -67,6 +69,10 @@ class Usuario
     {
         return self.depto!;
     }
+    func getOcupado() -> Bool
+    {
+        return self.ocupado;
+    }
     /*Constructores y destructores*/
     init()
     {
@@ -82,26 +88,31 @@ class Usuario
     }
     
     /*Funciones/Métodos*/
-    func leerDatosUsuario() -> Bool
+    func leerDatosUsuario( _vistalogin: LoginController)
     {
-        var resultado: Bool = false;
         let parametros =
         [
             jsonusuario : self.usuario,
             jsonpwd : self.password
         ]
+        self.ocupado = true;
         Alamofire.request(.POST, self.urlusuario,parameters: parametros).responseJSON()
             {
-                (_, _, JSON, error) in
-                if error == nil
+                (_, _response, _JSON, _error) in
+                if ( _error == nil )
                 {
-                    let info =  JSON as! NSDictionary
+                    self.ocupado = false;
+                    let info =  _JSON as! NSDictionary
                     var exito: Int = (info[self.jsonexito] as? Int)!
                     //println(info)
                     if( exito == Int(Estado.EXITO.rawValue) )
                     {
-                        println((info["usuarios"] as! NSArray).objectAtIndex(0)["apm"] as! String)
-                        
+                        self.persona = Mapeos.MapearPersona((info["usuarios"] as! NSArray));
+                        self.perfil = Mapeos.MapearPerfil((info["usuarios"] as! NSArray));
+                        self.nivel = Mapeos.MapearNivel((info["usuarios"] as! NSArray));
+                        self.depto = Mapeos.MapearDepto((info["usuarios"] as! NSArray))
+                        self.mensaje = self.perfil!.getID().getValido() ? self.mensaje : "Usuario con perfil no valido en el sistema." ;
+                        _vistalogin.validarPerfilUsuario();
                     }
                     else
                     {
@@ -110,35 +121,10 @@ class Usuario
                 }
                 else
                 {
-                    println(error)
-                    //self.mensajeError()
+                    self.ocupado = false;
+                    println(_error)
                 }
         }
-        /*
-        try
-            {
-                json = self.makeHttpRequest(Recursos.leerValorRecurso(self.context,URL_USUARIO), TYPE_REQUEST, params);
-                resultado = json.getInt(self.tokenexito) == Enumerados.Estado.EXITO.getValor() ;
-                if(resultado)
-                {
-                    JSONArray datos = json.getJSONArray("usuarios");
-                    self.persona = Mapeos.MapearPersona(self.context,datos);
-                    self.perfil = Mapeos.MapearPerfil(self.context,datos);
-                    self.nivel = Mapeos.MapearNivel(self.context,datos);
-                    self.depto = Mapeos.MapearDepto(self.context,datos);
-                    Enumerados.Perfiles usuarioperfil = Enumerados.Perfiles.leerPerfil(self.perfil.getID().byteValue());
-                    resultado = usuarioperfil.getValido();
-                    self.mensaje = resultado ? self.mensaje : "Usuario con perfil no valido en el sistema." ;
-                }
-                json=null;
-        }
-        catch (JSONException e)
-        {
-            e.printStackTrace();
-        }
-        params = null;
-        */
-        return resultado;
         
     }
 }

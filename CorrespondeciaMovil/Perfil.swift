@@ -14,14 +14,14 @@ public class Perfil
 {
     /*Propiedades de la clase*/
     /*Propiedades del objeto*/
-    private var id: Int;
+    private var id: Perfiles;
     private var perfil: String;
     /*Funciones Getters y setters*/
-    func setID( _id: Int )
+    func setID( _id: Perfiles )
     {
         self.id=_id;
     }
-    func getID() -> Int
+    func getID() -> Perfiles
     {
         return self.id;
     }
@@ -36,10 +36,10 @@ public class Perfil
     /*Constructores y destructores*/
     init()
     {
-        self.id=0;
+        self.id = Perfiles();
         self.perfil="";
     }
-    init( _perfilid: Int, _perfil: String)
+    init( _perfilid: Perfiles, _perfil: String)
     {
         self.id=_perfilid;
         self.perfil=_perfil;

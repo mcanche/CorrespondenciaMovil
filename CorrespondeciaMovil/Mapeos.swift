@@ -9,6 +9,8 @@
 /**
 * Created by ebllanes on 30/03/2015.
 */
+import Foundation
+
 public class Mapeos
 {
     //private final static String prefijo_funciongetter="prefijo_funcionget";
@@ -92,74 +94,48 @@ public class Mapeos
     return documentos;
     }
     */
-    class func MapearPersona( _datos: ) -> Persona
+    /*
+    direccion
+    */
+    class func MapearPersona( _datos: NSArray) -> Persona
     {
-        Persona persona = Persona();
-        
-        do
-        {
-            JSONObject dato = (JSONObject) _datos.get(0);
-            persona.setID(dato.getInt("idpersona"));
-            persona.setTitulo(Enumerados.TituloPersonal.NE);
-            persona.setApellidoPaterno(dato.getString("app"));
-            persona.setApellidoMaterno(dato.getString("apm"));
-            persona.setPrimerNombre(dato.getString("nom"));
-            persona.setSegundoNombre("");
-            persona.setIniciales(dato.getString("inicial"));
-        }
-        catch
-        {
-            
-        }
-        
+        var persona: Persona = Persona();
+        persona.setID((_datos.objectAtIndex(0)["idpersona"] as! String).toInt()!);
+        persona.setTitulo(TituloPersonal.NE);
+        persona.setApellidoPaterno(_datos.objectAtIndex(0)["app"] as! String);
+        persona.setApellidoMaterno(_datos.objectAtIndex(0)["apm"] as! String);
+        persona.setPrimerNombre(_datos.objectAtIndex(0)["nom"] as! String);
+        persona.setSegundoNombre("");
+        persona.setIniciales(_datos.objectAtIndex(0)["inicial"] as! String);
         return persona;
     }
+    class func MapearPerfil( _datos: NSArray) -> Perfil
+    {
+        var perfil: Perfil = Perfil();
+        perfil.setID(Perfiles(_perfilid: (_datos.objectAtIndex(0)["idperfil"] as! String).toInt()!));
+        perfil.setPerfil("");
+        return perfil;
+    }
+    class func  MapearNivel(_datos: NSArray) -> Nivel
+    {
+        var nivel: Nivel = Nivel();
+
+        nivel.setID((_datos.objectAtIndex(0)["idnivel"] as! String).toInt()!);
+        nivel.setNivel("");
+ 
+        return nivel;
+    }
+    class func  MapearDepto(_datos: NSArray) -> Depto
+    {
+    
+        var depto = Depto();
+    
+        depto.setID( (_datos.objectAtIndex(0)["iddepto"] as! String).toInt()! );
+        depto.setDepto("");
+
+        return depto;
+    }
     /*
-    public static Perfil MapearPerfil(Context _context, JSONArray _datos)
-    {
-    Perfil perfil = new Perfil(_context);
-    try
-    {
-    JSONObject dato = (JSONObject) _datos.get(0);
-    perfil.setID(dato.getInt("idperfil"));
-    perfil.setPerfil("");
-    }
-    catch (JSONException e)
-    {
-    e.printStackTrace();
-    }
-    return perfil;
-    }
-    public static Nivel MapearNivel(Context _context, JSONArray _datos)
-    {
-    Nivel nivel = new Nivel(_context);
-    try
-    {
-    JSONObject dato = (JSONObject) _datos.get(0);
-    nivel.setID(dato.getInt("idnivel"));
-    nivel.setNivel("");
-    }
-    catch (JSONException e)
-    {
-    e.printStackTrace();
-    }
-    return nivel;
-    }
-    public static Depto MapearDepto(Context _context, JSONArray _datos)
-    {
-    Depto depto = new Depto(_context);
-    try
-    {
-    JSONObject dato = (JSONObject) _datos.get(0);
-    depto.setID(dato.getInt("iddepto"));
-    depto.setDepto("");
-    }
-    catch (JSONException e)
-    {
-    e.printStackTrace();
-    }
-    return depto;
-    }
     public static void MapearDoctosRem(Context _context, TablaSQLite _datosloc, JSONArray _datosrem)
     {
     //Se invalidan los registros locales

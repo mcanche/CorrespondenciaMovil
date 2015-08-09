@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		181034B71B77FB120054DA9A /* DoctosRemoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181034B61B77FB120054DA9A /* DoctosRemoto.swift */; };
+		1810359E1B77FD930054DA9A /* Espera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1810359D1B77FD930054DA9A /* Espera.swift */; };
 		1829706E1B5722FE00B75545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829706D1B5722FE00B75545 /* LaunchScreen.xib */; };
 		183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A361A1B4EF0E000178E1A /* AppDelegate.swift */; };
 		183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183A361C1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld */; };
@@ -97,6 +99,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		181034B61B77FB120054DA9A /* DoctosRemoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosRemoto.swift; sourceTree = "<group>"; };
+		1810359D1B77FD930054DA9A /* Espera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Espera.swift; sourceTree = "<group>"; };
 		1829706D1B5722FE00B75545 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		183A36151B4EF0E000178E1A /* CorrespondenciaMovil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorrespondenciaMovil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183A36191B4EF0E000178E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 		183FFAE31B75AE2600275A81 /* ClasesVarias */ = {
 			isa = PBXGroup;
 			children = (
+				1810359D1B77FD930054DA9A /* Espera.swift */,
 				18C249D71B5A9BFA0017BC7E /* Imagen.swift */,
 				724CF4E11B50475C009F1072 /* Date.swift */,
 			);
@@ -296,6 +301,7 @@
 				183FFAE11B75AC3E00275A81 /* Perfil.swift */,
 				183FFAE41B760F3F00275A81 /* Usuario.swift */,
 				183FFAE61B765CCC00275A81 /* Mapeos.swift */,
+				181034B61B77FB120054DA9A /* DoctosRemoto.swift */,
 			);
 			name = Entidades;
 			sourceTree = "<group>";
@@ -492,6 +498,8 @@
 				189B60A11B506DD600177535 /* Documentos.swift in Sources */,
 				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
 				183FFAE21B75AC3E00275A81 /* Perfil.swift in Sources */,
+				181034B71B77FB120054DA9A /* DoctosRemoto.swift in Sources */,
+				1810359E1B77FD930054DA9A /* Espera.swift in Sources */,
 				18C249D81B5A9BFA0017BC7E /* Imagen.swift in Sources */,
 				183FFAE51B760F3F00275A81 /* Usuario.swift in Sources */,
 				183A361B1B4EF0E000178E1A /* AppDelegate.swift in Sources */,

@@ -84,7 +84,16 @@ Integer id;
  String iniciales;
  Enumerados.TituloPersonal titulopersonal;
 */
-
+    init()
+    {
+        self.id = 0;
+        self.primernombre = "";
+        self.segundonombre = "";
+        self.apellidopaterno = "";
+        self.apellidomaterno = "";
+        self.iniciales = "";
+        self.titulopersonal = TituloPersonal.NE;
+    }
     init(_id: Int,
         _primernombre: String, _segundonombre: String,
         _apellidopaterno: String, _apellidomaterno: String,

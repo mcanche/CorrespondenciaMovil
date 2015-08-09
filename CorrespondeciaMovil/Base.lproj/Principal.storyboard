@@ -19,26 +19,25 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aqZ-eb-u5w">
-                                <rect key="frame" x="154" y="177" width="430" height="30"/>
+                                <rect key="frame" x="159" y="174" width="425" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZX-Ui-hJX">
-                                <rect key="frame" x="20" y="232" width="93" height="21"/>
+                                <rect key="frame" x="20" y="229" width="100" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dZX-Ui-hJX" secondAttribute="height" multiplier="94:21" id="GGn-eq-8XB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LaQ-Gy-O0y">
-                                <rect key="frame" x="154" y="234" width="430" height="30"/>
+                                <rect key="frame" x="159" y="231" width="425" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="T1j-5V-t7I"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -47,13 +46,13 @@
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98h-3Q-WFQ">
-                                <rect key="frame" x="20" y="183" width="64" height="19"/>
-                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <rect key="frame" x="20" y="180" width="69" height="19"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdA-2C-Cm9">
-                                <rect key="frame" x="220" y="287" width="160" height="35"/>
+                                <rect key="frame" x="220" y="284" width="160" height="35"/>
                                 <color key="backgroundColor" red="0.0" green="0.43860505760000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Fcb-ac-D08"/>
@@ -74,34 +73,34 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="ingresar:" destination="TKF-rj-oPB" eventType="touchUpInside" id="yQy-y6-jUE"/>
+                                    <action selector="ingresar:" destination="TKF-rj-oPB" eventType="touchUpInside" id="rS8-gP-yxA"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-4-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="4dd-Ah-dwk">
-                                <rect key="frame" x="124" y="185" width="15" height="16"/>
+                                <rect key="frame" x="129" y="182" width="15" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="e7V-IZ-8Ew"/>
                                     <constraint firstAttribute="height" constant="16" id="gSe-yB-tNY"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glyphicons-204-lock.png" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-Zr-wuO">
-                                <rect key="frame" x="128" y="241" width="11" height="13"/>
+                                <rect key="frame" x="133" y="238" width="11" height="13"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="11" id="Gf5-QR-bnn"/>
                                     <constraint firstAttribute="height" constant="13" id="X5f-sa-dY8"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_segey.png" translatesAutoresizingMaskIntoConstraints="NO" id="OPj-gv-XAu">
-                                <rect key="frame" x="214" y="382" width="172" height="81"/>
+                                <rect key="frame" x="214" y="379" width="172" height="81"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="172" id="bhN-Ab-1eT"/>
                                     <constraint firstAttribute="height" constant="81" id="kW2-7Q-zvs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control de Correspondencia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpH-bt-ykr">
-                                <rect key="frame" x="10" y="104" width="580" height="33"/>
+                                <rect key="frame" x="10" y="104" width="580" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.90774152600000002" blue="0.2094633524" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="SnellRoundhand-Black" family="Snell Roundhand" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,14 +139,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="wMT-QM-pLu"/>
                     <connections>
-                        <outlet property="objpass" destination="LaQ-Gy-O0y" id="oYN-u7-Ltp"/>
-                        <outlet property="objusuario" destination="aqZ-eb-u5w" id="2z5-zx-ke7"/>
-                        <segue destination="RDN-Yf-IOx" kind="show" identifier="verDoctos" id="Ize-YE-ccS"/>
+                        <outlet property="biniciarsesion" destination="LdA-2C-Cm9" id="4c9-cl-qYo"/>
+                        <outlet property="objpass" destination="LaQ-Gy-O0y" id="JV8-ap-mN3"/>
+                        <outlet property="objusuario" destination="aqZ-eb-u5w" id="G3e-KB-ea9"/>
+                        <segue destination="RDN-Yf-IOx" kind="show" identifier="verDoctos" id="E55-Rg-d7i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cny-9O-hpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501" y="58"/>
+            <point key="canvasLocation" x="1505" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Y2Q-91-XVj">
@@ -286,7 +286,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Folio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDL-d9-v4h">
                                             <rect key="frame" x="85" y="5" width="220" height="21"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -418,6 +418,12 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-36-JeB">
+                                <rect key="frame" x="140" y="43" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="460075985.23122799">
+                                    <!--2015-07-31 22:53:05 +0000-->
+                                </date>
+                            </datePicker>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oud-5p-fG1">
                                 <rect key="frame" x="20" y="242" width="559" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -434,12 +440,6 @@
                                     </mask>
                                 </variation>
                             </textView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-36-JeB">
-                                <rect key="frame" x="140" y="43" width="320" height="162"/>
-                                <date key="date" timeIntervalSinceReferenceDate="460075985.23122799">
-                                    <!--2015-07-31 22:53:05 +0000-->
-                                </date>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -667,45 +667,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatus: Entregado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeC-NC-Djf">
-                                <rect key="frame" x="26" y="312" width="115" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estatus:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeC-NC-Djf">
+                                <rect key="frame" x="26" y="297" width="56" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oficio:418" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-R5-w1K">
-                                <rect key="frame" x="179" y="70" width="59" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oficio:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIF-R5-w1K">
+                                <rect key="frame" x="165" y="70" width="45" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Solicitud: 20 Marzo 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-eW-jdq">
-                                <rect key="frame" x="26" y="111" width="196" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Solicitud: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xda-eW-jdq">
+                                <rect key="frame" x="26" y="106" width="133" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año: 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylG-pi-LxZ">
-                                <rect key="frame" x="191" y="312" width="56" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylG-pi-LxZ">
+                                <rect key="frame" x="202" y="297" width="32" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asunto: Solicitud de Interinatos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-oP-bmS">
-                                <rect key="frame" x="26" y="353" width="184" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asunto:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tf-oP-bmS">
+                                <rect key="frame" x="26" y="333" width="60" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Ffv-Ic-6uX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Recepcion: 20 Marzo 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlz-io-QFJ">
-                                <rect key="frame" x="26" y="152" width="206" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folio: 2/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4W-MT-Rct">
-                                <rect key="frame" x="26" y="70" width="73" height="21"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Recepcion:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlz-io-QFJ">
+                                <rect key="frame" x="26" y="142" width="141" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -715,50 +712,163 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depto: DEPARTAMENTO DE ESTUDIOS Y PROYECTOS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exB-2m-rfW">
-                                <rect key="frame" x="26" y="250" width="250" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depto: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exB-2m-rfW">
+                                <rect key="frame" x="26" y="235" width="50" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="JYF-aG-stS"/>
+                                    <constraint firstAttribute="width" constant="50" id="JYF-aG-stS"/>
                                     <constraint firstAttribute="height" constant="42" id="wd1-cv-5fa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nivel: Educación Secundaria" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-en-i2o">
-                                <rect key="frame" x="26" y="188" width="250" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nivel: " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-en-i2o">
+                                <rect key="frame" x="26" y="173" width="50" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="G43-AV-QjK"/>
-                                    <constraint firstAttribute="width" constant="250" id="ZDM-hP-2my"/>
+                                    <constraint firstAttribute="width" constant="50" id="ZDM-hP-2my"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Folio:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4W-MT-Rct">
+                                <rect key="frame" x="26" y="70" width="39" height="16"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 2/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhI-0E-Wkb">
+                                <rect key="frame" x="73" y="70" width="47" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 2/2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGc-Nj-Sue">
+                                <rect key="frame" x="218" y="70" width="47" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Marzo 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-PQ-k4O">
+                                <rect key="frame" x="174" y="106" width="94" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 Marzo 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVN-k0-WQM">
+                                <rect key="frame" x="175" y="142" width="94" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Educación Secundaria" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8H-qX-fzy">
+                                <rect key="frame" x="91" y="173" width="141" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="k3d-Ki-kQy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEPARTAMENTO DE ESTUDIOS Y PROYECTOS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh4-Uv-D9N">
+                                <rect key="frame" x="91" y="235" width="489" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="I1a-n5-9xH"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZOl-E0-1pV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I1a-n5-9xH"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entregado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHf-7a-Hgs">
+                                <rect key="frame" x="92" y="297" width="65" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 2015" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-lr-LuD">
+                                <rect key="frame" x="244" y="297" width="36" height="16"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEPARTAMENTO DE ESTUDIOS Y PROYECTOS" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUO-YN-alw">
+                                <rect key="frame" x="96" y="323" width="484" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="Ei9-y1-3EM"/>
+                                    <constraint firstAttribute="height" constant="50" id="uRl-Tr-xGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ei9-y1-3EM"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.86274509799999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="afP-nf-11c" secondAttribute="centerX" id="1dF-Sy-c1R"/>
+                            <constraint firstItem="xHf-7a-Hgs" firstAttribute="leading" secondItem="oeC-NC-Djf" secondAttribute="trailing" constant="10" id="1tk-dK-hD6"/>
+                            <constraint firstItem="NhI-0E-Wkb" firstAttribute="leading" secondItem="p4W-MT-Rct" secondAttribute="trailing" constant="8" id="2SJ-FV-Qzk"/>
                             <constraint firstItem="Xda-eW-jdq" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="2Zh-T3-n0J"/>
+                            <constraint firstItem="oUO-YN-alw" firstAttribute="leading" secondItem="3tf-oP-bmS" secondAttribute="trailing" constant="10" id="65R-pA-5t9"/>
                             <constraint firstItem="3tf-oP-bmS" firstAttribute="top" secondItem="oeC-NC-Djf" secondAttribute="bottom" constant="20" id="6g2-Qb-i4b"/>
+                            <constraint firstItem="u8a-PQ-k4O" firstAttribute="leading" secondItem="Xda-eW-jdq" secondAttribute="trailing" constant="15" id="7CO-XU-Rii"/>
                             <constraint firstItem="ylG-pi-LxZ" firstAttribute="top" secondItem="exB-2m-rfW" secondAttribute="bottom" constant="20" id="91H-78-264"/>
+                            <constraint firstItem="XGc-Nj-Sue" firstAttribute="top" secondItem="afP-nf-11c" secondAttribute="bottom" constant="50" id="9P3-rf-UUT"/>
                             <constraint firstItem="Xda-eW-jdq" firstAttribute="top" secondItem="p4W-MT-Rct" secondAttribute="bottom" constant="20" id="9yU-bv-OBW"/>
+                            <constraint firstItem="u8a-PQ-k4O" firstAttribute="top" secondItem="p4W-MT-Rct" secondAttribute="bottom" constant="20" id="A0L-z6-IDH"/>
+                            <constraint firstItem="XGc-Nj-Sue" firstAttribute="top" secondItem="afP-nf-11c" secondAttribute="bottom" constant="26" id="A9p-pE-OXS"/>
                             <constraint firstItem="sOa-en-i2o" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="Ar2-9g-FWC"/>
                             <constraint firstItem="p4W-MT-Rct" firstAttribute="top" secondItem="3dz-Yn-CjB" secondAttribute="bottom" constant="50" id="BbU-Wi-Cgy"/>
+                            <constraint firstItem="R8H-qX-fzy" firstAttribute="top" secondItem="nlz-io-QFJ" secondAttribute="bottom" constant="15" id="BiB-Qf-ns2"/>
+                            <constraint firstItem="R8H-qX-fzy" firstAttribute="leading" secondItem="sOa-en-i2o" secondAttribute="trailing" constant="15" id="Dru-1s-0ta"/>
                             <constraint firstItem="exB-2m-rfW" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="EOs-zo-5re"/>
-                            <constraint firstItem="UIF-R5-w1K" firstAttribute="leading" secondItem="p4W-MT-Rct" secondAttribute="trailing" constant="80" id="FpY-xb-Nct"/>
+                            <constraint firstItem="UIF-R5-w1K" firstAttribute="leading" secondItem="p4W-MT-Rct" secondAttribute="trailing" constant="100" id="FpY-xb-Nct"/>
                             <constraint firstItem="UIF-R5-w1K" firstAttribute="top" secondItem="oQK-Jf-y3F" secondAttribute="top" constant="70" id="GxT-ck-lH3"/>
                             <constraint firstItem="afP-nf-11c" firstAttribute="top" secondItem="oQK-Jf-y3F" secondAttribute="topMargin" constant="20" id="Iwv-pI-h0Q"/>
+                            <constraint firstItem="jVN-k0-WQM" firstAttribute="top" secondItem="Xda-eW-jdq" secondAttribute="bottom" constant="20" id="JZi-p0-Srj"/>
+                            <constraint firstItem="NhI-0E-Wkb" firstAttribute="top" secondItem="3dz-Yn-CjB" secondAttribute="bottom" constant="50" id="K5v-JH-iVe"/>
+                            <constraint firstItem="jVN-k0-WQM" firstAttribute="leading" secondItem="nlz-io-QFJ" secondAttribute="trailing" constant="8" id="LTD-5u-KV1"/>
+                            <constraint firstItem="XGc-Nj-Sue" firstAttribute="leading" secondItem="UIF-R5-w1K" secondAttribute="trailing" constant="8" id="MRK-2u-K6G"/>
                             <constraint firstItem="oeC-NC-Djf" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="RTb-V9-sew"/>
                             <constraint firstItem="exB-2m-rfW" firstAttribute="top" secondItem="sOa-en-i2o" secondAttribute="bottom" constant="20" id="T1d-Iq-cV6"/>
                             <constraint firstItem="3tf-oP-bmS" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="Ypt-kt-sF7"/>
+                            <constraint firstItem="NhI-0E-Wkb" firstAttribute="top" secondItem="oQK-Jf-y3F" secondAttribute="topMargin" constant="50" id="Zg0-ev-2hm"/>
                             <constraint firstItem="sOa-en-i2o" firstAttribute="top" secondItem="nlz-io-QFJ" secondAttribute="bottom" constant="15" id="b0r-VJ-QgV"/>
                             <constraint firstItem="oeC-NC-Djf" firstAttribute="top" secondItem="exB-2m-rfW" secondAttribute="bottom" constant="20" id="ecF-6N-eau"/>
+                            <constraint firstAttribute="trailing" secondItem="eh4-Uv-D9N" secondAttribute="trailing" constant="20" id="eoK-pc-Sgh"/>
+                            <constraint firstItem="xgP-lr-LuD" firstAttribute="top" secondItem="exB-2m-rfW" secondAttribute="bottom" constant="20" id="fIl-Nz-spI"/>
+                            <constraint firstItem="xHf-7a-Hgs" firstAttribute="top" secondItem="exB-2m-rfW" secondAttribute="bottom" constant="20" id="gqi-i2-o2u"/>
                             <constraint firstItem="p4W-MT-Rct" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="hvi-zz-V35"/>
-                            <constraint firstItem="ylG-pi-LxZ" firstAttribute="leading" secondItem="oeC-NC-Djf" secondAttribute="trailing" constant="50" id="lB0-sM-GKS"/>
+                            <constraint firstItem="ylG-pi-LxZ" firstAttribute="leading" secondItem="oeC-NC-Djf" secondAttribute="trailing" constant="120" id="lB0-sM-GKS"/>
+                            <constraint firstItem="UIF-R5-w1K" firstAttribute="top" secondItem="afP-nf-11c" secondAttribute="bottom" constant="50" id="n0m-cI-tub"/>
+                            <constraint firstItem="xgP-lr-LuD" firstAttribute="leading" secondItem="ylG-pi-LxZ" secondAttribute="trailing" constant="10" id="o2l-dX-Xh8"/>
+                            <constraint firstItem="oUO-YN-alw" firstAttribute="top" secondItem="oeC-NC-Djf" secondAttribute="bottom" constant="10" id="q21-t2-Ne3"/>
+                            <constraint firstAttribute="trailing" secondItem="oUO-YN-alw" secondAttribute="trailing" constant="20" id="rsv-9p-FUB"/>
                             <constraint firstItem="nlz-io-QFJ" firstAttribute="leading" secondItem="oQK-Jf-y3F" secondAttribute="leadingMargin" constant="10" id="spU-Vk-iW2"/>
+                            <constraint firstItem="eh4-Uv-D9N" firstAttribute="top" secondItem="sOa-en-i2o" secondAttribute="bottom" constant="20" id="wH1-Xf-K9k"/>
+                            <constraint firstItem="eh4-Uv-D9N" firstAttribute="leading" secondItem="exB-2m-rfW" secondAttribute="trailing" constant="15" id="wQp-wt-m7A"/>
+                            <constraint firstItem="XGc-Nj-Sue" firstAttribute="top" secondItem="afP-nf-11c" secondAttribute="bottom" constant="50" id="wYQ-xa-Cbx"/>
                             <constraint firstItem="nlz-io-QFJ" firstAttribute="top" secondItem="Xda-eW-jdq" secondAttribute="bottom" constant="20" id="z8f-08-KRP"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Zg0-ev-2hm"/>
+                                <exclude reference="n0m-cI-tub"/>
+                                <exclude reference="9P3-rf-UUT"/>
+                                <exclude reference="wYQ-xa-Cbx"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="M7s-S4-rcN"/>
                 </viewController>
