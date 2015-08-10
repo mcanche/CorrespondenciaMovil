@@ -104,7 +104,7 @@ class Usuario
                     self.ocupado = false;
                     let info =  _JSON as! NSDictionary
                     var exito: Int = (info[self.jsonexito] as? Int)!
-                    //println(info)
+                    println(info)
                     if( exito == Int(Estado.EXITO.rawValue) )
                     {
                         self.persona = Mapeos.MapearPersona((info["usuarios"] as! NSArray));

@@ -12,90 +12,129 @@ import CoreData
 class DoctosDepto: UITableViewController
 {
     
+    var doctos: Array<AnyObject> = []
+    
+    private var estatus: Int8 = 0;
+    private var imagennom: String = "rojo.png";
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+        iniciarTabPer()
     }
     
     override func viewDidAppear(animated: Bool)
     {
-
+        let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context:NSManagedObjectContext = appDel.managedObjectContext!
+        let freq : NSFetchRequest = NSFetchRequest(entityName: "Documentos")
+        let filtro1: NSPredicate = NSPredicate(format: "vigente = %@", true);
+        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", 2);
+        var filtros = NSCompoundPredicate.andPredicateWithSubpredicates([filtro1, filtro2])
+        freq.predicate = filtros
+        doctos = context.executeFetchRequest(freq, error: nil)!
+        tableView.reloadData()
+        
+        //(self.parentViewController as! VistaDocumentos)
     }
     
-    override func didReceiveMemoryWarning()
+    private func iniciarTabPer()
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        switch Int(self.tabBarItem.tag)
+        {
+        case 1:
+            self.estatus = 1;
+            self.imagennom = "rojo.png";
+            break;
+        case 3:
+            self.estatus = 3;
+            self.imagennom = "verde2.png";
+            break
+        default:
+            break
+        }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return doctos.count
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cellid : String = "docto"
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellid) as! UITableViewCell
+        
+        var docto: NSManagedObject = doctos[indexPath.row] as! NSManagedObject
+        var objimagen : Imagen = Imagen()
+        
+        //Etiquetas
+        var texto: UILabel = cell.viewWithTag(1) as! UILabel
+        texto.text = ("Folio: "+docto.valueForKeyPath("folio")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
+        texto = cell.viewWithTag(2) as! UILabel
+        texto.text = ("Oficio: "+docto.valueForKeyPath("ofsol")!.stringValue!)
+        texto = cell.viewWithTag(3) as! UILabel
+        texto.text = ("Asunto: "+(docto.valueForKeyPath("asunto")! as! String))
+        
+        //Imagen
+        let imagennva = objimagen.cambiarTam(UIImage(named: imagennom)!, tamsol: CGSizeMake(30,30))
+        var imagencapa: CALayer! = cell.imageView?.layer
+        imagencapa.cornerRadius = imagencapa.frame.size.width / 2
+        imagencapa.masksToBounds = true
+        cell.imageView?.image = imagennva
+        
         return cell
     }
-    */
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    // Return NO if you do not want the specified item to be editable.
+    return true
     }
     */
-
+    
     /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    if editingStyle == .Delete {
+    // Delete the row from the data source
+    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+    } else if editingStyle == .Insert {
+    // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
     }
     */
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
+    // Return NO if you do not want the item to be re-orderable.
+    return true
     }
     */
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

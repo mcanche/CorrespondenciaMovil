@@ -14,6 +14,10 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
     
     private var menulat: MenuLateral = MenuLateral()
     private var espera: UIAlertView = UIAlertView()
+    private var doctos: DoctosRemoto?;
+    
+    private var itemseltag: Int = 0;
+    private var itemseltitle: String = "";
     
     var usuario: Usuario?;
     
@@ -26,11 +30,35 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
         menulat = MenuLateral (_vistaoriginal: self.view, _elementosmenu: elementosmenu)
         menulat.delegado = self
         /*Fin de configuración del menú lateral*/
-        //self.toolbarItems[1].enabled=false;
-        
         /*Habilitamos/ deshabilitamos la sección de pendientes*/
         (self.tabBar.items![1] as! UITabBarItem).enabled = self.usuario!.getPerfil().getID().esValidador();
-
+        if( self.usuario!.getPerfil().getID().esValidador() )
+        {
+            self.selectedIndex=1
+        }
+        self.leerCorrespondencia()
+    }
+    func leerCorrespondencia()
+    {
+        Espera.mostrarEspera(&self.espera,_mensaje: "Leyendo información, espere un momento...")
+        /*Leemos documentos remotos*/
+        doctos=DoctosRemoto(_usuario: self.usuario!);
+        doctos?.leerCorrespondencia(self);
+    }
+    func ocultarEspera()
+    {
+        self.selectedViewController?.viewDidAppear(true)
+        Espera.ocultarEspera(&self.espera);
+    }
+    
+    func getItemSelTag() -> Int
+    {
+        return self.itemseltag;
+    }
+    
+    func getItemSelTitle() -> String
+    {
+        return self.itemseltitle;
     }
 
     override func didReceiveMemoryWarning()
@@ -44,6 +72,7 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
         switch(_index)
         {
             case 0:
+                self.leerCorrespondencia()
                 break;
             case 1:
                 break;
@@ -62,13 +91,18 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
         menulat.mostrarMenuLateral(!menulat.menulateralabierto)
     }
 
+    override func tabBar(_tabBar: UITabBar, didSelectItem _item: UITabBarItem!)
+    {
+        self.itemseltag = Int(_item.tag);
+        self.itemseltitle = _item.title!
+        
+    }
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
     }
     */
 

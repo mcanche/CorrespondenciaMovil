@@ -111,7 +111,7 @@ class LoginController: UIViewController
     {
         //self.biniciarsesion.userInteractionEnabled = false;
         self.biniciarsesion.enabled = false;
-        Espera.mostrarEspera(&self.espera,_mensaje: "Validando...")
+        Espera.mostrarEspera(&self.espera,_mensaje: "Validando sus datos...")
         self.iniciarSesion()
         
     }

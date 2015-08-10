@@ -24,11 +24,21 @@ class DoctosDeptoPend: UITableViewController
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let freq : NSFetchRequest = NSFetchRequest(entityName: "Documentos")
+        /*Filtro simple*/
+        //freq.predicate = NSPredicate(format: "vigente = %@", true)
+        let filtro1: NSPredicate = NSPredicate(format: "vigente = %@", true);
+        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", 2);
+        var filtros = NSCompoundPredicate.andPredicateWithSubpredicates([filtro1, filtro2])
+        freq.predicate = filtros
         doctos = context.executeFetchRequest(freq, error: nil)!
         tableView.reloadData()
     }
     
-    //func datosPruebas(_entidad: NSEntityDescription, _context: NSManagedObjectContext)
+    func actualizarVista()
+    {
+        self.viewDidAppear(true)
+    }
+    
     func datosPruebas()
     {
         let appDel:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -78,17 +88,16 @@ class DoctosDeptoPend: UITableViewController
         texto.text = ("Folio: "+docto.valueForKeyPath("folio")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
         texto = cell.viewWithTag(2) as! UILabel
         texto.text = ("Oficio: "+docto.valueForKeyPath("ofsol")!.stringValue!)
+        texto = cell.viewWithTag(3) as! UILabel
+        texto.text = ("Asunto: "+(docto.valueForKeyPath("asunto")! as! String))
+        
         //Imagen
-        let imagennom = "Verde.png"
+        let imagennom = "ambar.png"
         let imagennva = objimagen.cambiarTam(UIImage(named: imagennom)!, tamsol: CGSizeMake(30,30))
         var imagencapa: CALayer! = cell.imageView?.layer
         imagencapa.cornerRadius = imagencapa.frame.size.width / 2
         imagencapa.masksToBounds = true
         cell.imageView?.image = imagennva
-        //texto = cell.viewWithTag(3) as! UILabel
-        //texto.text = ("Asunto: "+(docto.valueForKeyPath("imageasunto")! as! String))
-        
-        //cell.imageView!.image = UIImage(named: "MenuAct")
         
         return cell
     }

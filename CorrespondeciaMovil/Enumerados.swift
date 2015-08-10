@@ -116,6 +116,38 @@ enum Perfiles
         }
         return resultado;
     }
+    func getID() -> Int
+    {
+        var resultado: Int = 0
+        switch self
+        {
+        case .ADMINISTRADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .SECRETARIADIRECCION(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .SECRETARIADEPARTAMENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .VALIDADOR(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .MANTENIMIENTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .TESTER(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .JEFEDEPTO(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        case .NOPERMITIDO(let _id, let _valido, let _validador, let _jefe):
+            resultado = Int(_id);
+            break;
+        }
+        return resultado;
+    }
 }
 
 enum TituloPersonal : Int8
