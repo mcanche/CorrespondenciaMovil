@@ -144,26 +144,7 @@ public class Mapeos
         {
             context.deleteObject(d as! NSManagedObject)
         }
-        
     }
-    /*
-    {
-    anio = 2015;
-    asunto = "Solicitud de Interinatos";
-    depto = "DEPARTAMENTO DE ESTUDIOS Y PROYECTOS";
-    estatus = "ENTREGADO AL DEPTO";
-    "fec_acep" = "2015-04-15";
-    "fec_rec" = "2015-03-27";
-    "fec_sol" = "2015-03-25";
-    folsol = 2;
-    id = 1;
-    iddepto = 3;
-    idnivel = 4;
-    idst = 2;
-    nivel = "Educaci\U00f3n Secundaria";
-    ofisol = 691;
-    }
-*/
     /*
     public static ArrayList<ResumenLinea> crearListaResumen(JSONArray _datos)
     {

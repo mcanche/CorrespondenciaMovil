@@ -55,7 +55,7 @@ class Date
             let dia = components.day;
             var caddia = dia < 10 ? "0\(dia)" : "\(dia)";
             
-            cadfecha = "\(caddia)-\(nommeses.meses[mes])-\(dia)";
+            cadfecha = "\(caddia)-\(nommeses.meses[mes])-\(anio)";
         }
         
         return cadfecha;

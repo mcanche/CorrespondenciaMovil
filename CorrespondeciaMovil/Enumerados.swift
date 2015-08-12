@@ -217,9 +217,9 @@ public enum Estado : Int8
 
 public enum Estatus
 {
-    case RECEPCIONADO(_id: Int8, _icon: String, _leyenda: String, _color: Int)
-    case ENTREGADODEPTO(_id: Int8, _icon: String, _leyenda: String, _color: Int)
-    case CONTESTADO(_id: Int8, _icon: String, _leyenda: String, _color: Int)
+    case RECEPCIONADO(_id: Int8, _icon: String, _leyenda: String, _color: Int64)
+    case ENTREGADODEPTO(_id: Int8, _icon: String, _leyenda: String, _color: Int64)
+    case CONTESTADO(_id: Int8, _icon: String, _leyenda: String, _color: Int64)
     
     /*Constructores*/
     init()
@@ -245,5 +245,24 @@ public enum Estatus
             break
         }
     }
-    
+    func getID() -> Int
+    {
+        var resultado: Int = 0
+        switch self
+        {
+        case .RECEPCIONADO(let _id, let _icon, let _leyenda, let _color):
+            resultado = Int(_id);
+            break;
+        case .ENTREGADODEPTO(let _id, let _icon, let _leyenda, let _color):
+            resultado = Int(_id);
+            break;
+        case .CONTESTADO(let _id, let _icon, let _leyenda, let _color):
+            resultado = Int(_id);
+            break;
+        default:
+            resultado = 0
+            break;
+        }
+        return resultado;
+    }
 }

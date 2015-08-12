@@ -74,7 +74,44 @@ public class DoctosRemoto
         }
         
     }
-
+    func responderCorrespondencia( _docto: Documento ) -> Bool
+    {
+        var resultado: Bool = false;
+        let parametros =
+        [
+            "cId" : _docto.getFolio(),
+            "respuesta" : _docto.getRespuesta(),
+            "fecresp" : _docto.getFechaRespuesta(),
+            "idval" : self.usuario!.getPersona().getID()
+        ]
+        
+        Alamofire.request(.POST, self.urldoctosrespuesta,parameters: parametros as? [String : AnyObject]).responseJSON()
+            {
+                (_, _response, _JSON, _error) in
+                if ( _error == nil )
+                {
+                    let info =  _JSON as! NSDictionary
+                    var exito: Int = (info[self.jsonexito] as? Int)!
+                    if( info[self.jsonmensaje] != nil && !(info[self.jsonmensaje] is NSNull) )
+                    {
+                        self.mensaje = (info[self.jsonmensaje] as? String)!
+                    }
+                    if( exito == Int(Estado.EXITO.rawValue) )
+                    {
+                       
+                    }
+                    else
+                    {
+                        println(self.mensaje)
+                    }
+                }
+                else
+                {
+                    println(_error)
+                }
+        }
+        return resultado;
+    }
     /*
     public boolean responderCorrespondencia(Documento _docto)
     {

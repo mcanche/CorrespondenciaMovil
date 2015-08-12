@@ -13,6 +13,9 @@ class DoctosDepto: UITableViewController
 {
     
     var doctos: Array<AnyObject> = []
+    /************Identificadores segue************/
+    private var segueiddetrec: String = "verdetrec";
+    private var segueiddetresp: String = "verdetresp";
     
     private var estatus: Int8 = 0;
     private var imagennom: String = "rojo.png";
@@ -21,7 +24,7 @@ class DoctosDepto: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        iniciarTabPer()
+        self.iniciarTabPer()
     }
     
     override func viewDidAppear(animated: Bool)
@@ -30,12 +33,12 @@ class DoctosDepto: UITableViewController
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let freq : NSFetchRequest = NSFetchRequest(entityName: "Documentos")
         let filtro1: NSPredicate = NSPredicate(format: "vigente = %@", true);
-        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", 2);
+        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", 2);//self.estatus);
         var filtros = NSCompoundPredicate.andPredicateWithSubpredicates([filtro1, filtro2])
         freq.predicate = filtros
         doctos = context.executeFetchRequest(freq, error: nil)!
         tableView.reloadData()
-        
+        //self.navigationController?.navigationBar.topItem!.title = "";
         //(self.parentViewController as! VistaDocumentos)
     }
     
@@ -83,11 +86,12 @@ class DoctosDepto: UITableViewController
         texto.text = ("Asunto: "+(docto.valueForKeyPath("asunto")! as! String))
         
         //Imagen
+        /*
         let imagennva = objimagen.cambiarTam(UIImage(named: imagennom)!, tamsol: CGSizeMake(30,30))
         var imagencapa: CALayer! = cell.imageView?.layer
         imagencapa.cornerRadius = imagencapa.frame.size.width / 2
         imagencapa.masksToBounds = true
-        cell.imageView?.image = imagennva
+        cell.imageView?.image = imagennva*/
         
         return cell
     }
@@ -127,14 +131,31 @@ class DoctosDepto: UITableViewController
     }
     */
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        var elementosel : Documentos = doctos[self.tableView.indexPathForSelectedRow()!.row] as! Documentos
+        
+        // Get the new view controller using [segue destinationViewController].
+        if(segue.identifier == self.segueiddetrec || segue.identifier == self.segueiddetresp)
+        {
+            let vistadet : VistaDetalle = segue.destinationViewController as! VistaDetalle
+            var docto: Documento = Documento();
+            //Llenamos el objeto de intercambio
+            docto.setFolio(elementosel.folio.integerValue)
+            docto.setOf_sol(elementosel.ofsol.integerValue)
+            docto.setAsunto(elementosel.asunto)
+            docto.setIdestatus(elementosel.idestatus.charValue)
+            docto.setEstatus(elementosel.estatus)
+            docto.setAnio(elementosel.anio.integerValue)
+            docto.setSolicitud(elementosel.solicitud)
+            docto.setRecepcion(elementosel.recepcion)
+            docto.setIdnivel(elementosel.idnivel.integerValue)
+            docto.setNivel(elementosel.nivel)
+            docto.setIDdepto(elementosel.iddepto.integerValue)
+            docto.setDepto(elementosel.depto)
+            vistadet.setDocto(docto);
+        }
+
     }
-    */
     
 }
