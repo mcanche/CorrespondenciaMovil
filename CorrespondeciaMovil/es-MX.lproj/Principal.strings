@@ -1,0 +1,156 @@
+
+/* Class = "UILabel"; text = "Educación Inicial y Preescolar"; ObjectID = "2Yn-AA-kW8"; */
+"2Yn-AA-kW8.text" = "Educación Inicial y Preescolar";
+
+/* Class = "UILabel"; text = "Respuesta"; ObjectID = "3nX-3R-AiY"; */
+"3nX-3R-AiY.text" = "Respuesta";
+
+/* Class = "UILabel"; text = "Asunto:"; ObjectID = "3tf-oP-bmS"; */
+"3tf-oP-bmS.text" = "Asunto:";
+
+/* Class = "UILabel"; text = "Folio"; ObjectID = "5oj-eG-0qX"; */
+"5oj-eG-0qX.text" = "Folio";
+
+/* Class = "UILabel"; text = "Asunto"; ObjectID = "6Y8-fq-wGD"; */
+"6Y8-fq-wGD.text" = "Asunto";
+
+/* Class = "UILabel"; text = "998"; ObjectID = "8if-Lv-YnR"; */
+"8if-Lv-YnR.text" = "998";
+
+/* Class = "UILabel"; text = "999"; ObjectID = "8zY-6C-nce"; */
+"8zY-6C-nce.text" = "999";
+
+/* Class = "UILabel"; text = "Usuario:"; ObjectID = "98h-3Q-WFQ"; */
+"98h-3Q-WFQ.text" = "Usuario:";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "9Uq-TJ-Ada"; */
+"9Uq-TJ-Ada.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Folio"; ObjectID = "FDL-d9-v4h"; */
+"FDL-d9-v4h.text" = "Folio";
+
+/* Class = "UILabel"; text = "Oficio"; ObjectID = "Gj7-IJ-Pfj"; */
+"Gj7-IJ-Pfj.text" = "Oficio";
+
+/* Class = "UILabel"; text = "996"; ObjectID = "GqK-26-7FU"; */
+"GqK-26-7FU.text" = "996";
+
+/* Class = "UILabel"; text = "Total"; ObjectID = "Jr4-3f-bEL"; */
+"Jr4-3f-bEL.text" = "Total";
+
+/* Class = "UIButton"; normalTitle = "Iniciar Sesión"; ObjectID = "LdA-2C-Cm9"; */
+"LdA-2C-Cm9.normalTitle" = "Iniciar Sesión";
+
+/* Class = "UILabel"; text = " 2/2015"; ObjectID = "NhI-0E-Wkb"; */
+"NhI-0E-Wkb.text" = " 2/2015";
+
+/* Class = "UILabel"; text = "Rec"; ObjectID = "P7q-cD-XZA"; */
+"P7q-cD-XZA.text" = "Rec";
+
+/* Class = "UILabel"; text = "Educación Secundaria"; ObjectID = "R8H-qX-fzy"; */
+"R8H-qX-fzy.text" = "Educación Secundaria";
+
+/* Class = "UILabel"; text = "Oficio:"; ObjectID = "UIF-R5-w1K"; */
+"UIF-R5-w1K.text" = "Oficio:";
+
+/* Class = "UILabel"; text = "Asunto"; ObjectID = "UTF-dS-tUd"; */
+"UTF-dS-tUd.text" = "Asunto";
+
+/* Class = "UITabBarItem"; title = "Pendientes"; ObjectID = "VCr-Za-Cww"; */
+"VCr-Za-Cww.title" = "Pendientes";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VYF-WT-0Hs"; */
+"VYF-WT-0Hs.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ent"; ObjectID = "WBj-ze-mLH"; */
+"WBj-ze-mLH.text" = "Ent";
+
+/* Class = "UILabel"; text = "Folio"; ObjectID = "Wgw-5o-cWG"; */
+"Wgw-5o-cWG.text" = "Folio";
+
+/* Class = "UILabel"; text = " 2/2015"; ObjectID = "XGc-Nj-Sue"; */
+"XGc-Nj-Sue.text" = " 2/2015";
+
+/* Class = "UITabBarItem"; title = "Contestados"; ObjectID = "XRx-vD-hXU"; */
+"XRx-vD-hXU.title" = "Contestados";
+
+/* Class = "UILabel"; text = "Fecha de Solicitud: "; ObjectID = "Xda-eW-jdq"; */
+"Xda-eW-jdq.text" = "Fecha de Solicitud: ";
+
+/* Class = "UILabel"; text = "Comentarios"; ObjectID = "ZUf-kb-OPe"; */
+"ZUf-kb-OPe.text" = "Comentarios";
+
+/* Class = "UILabel"; text = "Detalles de la Solicitud"; ObjectID = "afP-nf-11c"; */
+"afP-nf-11c.text" = "Detalles de la Solicitud";
+
+/* Class = "UILabel"; text = "Control de Correspondencia"; ObjectID = "bpH-bt-ykr"; */
+"bpH-bt-ykr.text" = "Control de Correspondencia";
+
+/* Class = "UILabel"; text = "Contraseña:"; ObjectID = "dZX-Ui-hJX"; */
+"dZX-Ui-hJX.text" = "Contraseña:";
+
+/* Class = "UITabBarItem"; title = "Recepcionados"; ObjectID = "e8Q-pZ-JN5"; */
+"e8Q-pZ-JN5.title" = "Recepcionados";
+
+/* Class = "UILabel"; text = "DEPARTAMENTO DE ESTUDIOS Y PROYECTOS"; ObjectID = "eh4-Uv-D9N"; */
+"eh4-Uv-D9N.text" = "DEPARTAMENTO DE ESTUDIOS Y PROYECTOS";
+
+/* Class = "UILabel"; text = "Depto: "; ObjectID = "exB-2m-rfW"; */
+"exB-2m-rfW.text" = "Depto: ";
+
+/* Class = "UILabel"; text = "Oficio"; ObjectID = "fNs-u9-LAE"; */
+"fNs-u9-LAE.text" = "Oficio";
+
+/* Class = "UILabel"; text = "997"; ObjectID = "hgv-pW-0Fm"; */
+"hgv-pW-0Fm.text" = "997";
+
+/* Class = "UILabel"; text = "20 Marzo 2015"; ObjectID = "jVN-k0-WQM"; */
+"jVN-k0-WQM.text" = "20 Marzo 2015";
+
+/* Class = "UILabel"; text = "Res"; ObjectID = "k8k-OO-QMd"; */
+"k8k-OO-QMd.text" = "Res";
+
+/* Class = "UILabel"; text = "Asunto"; ObjectID = "k9H-FM-3Wu"; */
+"k9H-FM-3Wu.text" = "Asunto";
+
+/* Class = "UILabel"; text = "Fecha de Recepcion:"; ObjectID = "nlz-io-QFJ"; */
+"nlz-io-QFJ.text" = "Fecha de Recepcion:";
+
+/* Class = "UILabel"; text = "DEPARTAMENTO DE ESTUDIOS Y PROYECTOS"; ObjectID = "oUO-YN-alw"; */
+"oUO-YN-alw.text" = "DEPARTAMENTO DE ESTUDIOS Y PROYECTOS";
+
+/* Class = "UILabel"; text = "Estatus:"; ObjectID = "oeC-NC-Djf"; */
+"oeC-NC-Djf.text" = "Estatus:";
+
+/* Class = "UILabel"; text = "Folio:"; ObjectID = "p4W-MT-Rct"; */
+"p4W-MT-Rct.text" = "Folio:";
+
+/* Class = "UILabel"; text = "Nivel: "; ObjectID = "sOa-en-i2o"; */
+"sOa-en-i2o.text" = "Nivel: ";
+
+/* Class = "UILabel"; text = "Oficio"; ObjectID = "sW3-PL-Wkj"; */
+"sW3-PL-Wkj.text" = "Oficio";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tjJ-bE-Nga"; */
+"tjJ-bE-Nga.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "20 Marzo 2015"; ObjectID = "u8a-PQ-k4O"; */
+"u8a-PQ-k4O.text" = "20 Marzo 2015";
+
+/* Class = "UIButton"; normalTitle = "Enviar"; ObjectID = "vLS-vA-koi"; */
+"vLS-vA-koi.normalTitle" = "Enviar";
+
+/* Class = "UILabel"; text = "Resumen de Correspondencia"; ObjectID = "wSp-1h-Rc6"; */
+"wSp-1h-Rc6.text" = "Resumen de Correspondencia";
+
+/* Class = "UILabel"; text = "ENTREGADO AL DEPTO"; ObjectID = "xHf-7a-Hgs"; */
+"xHf-7a-Hgs.text" = "ENTREGADO AL DEPTO";
+
+/* Class = "UILabel"; text = " 2015"; ObjectID = "xgP-lr-LuD"; */
+"xgP-lr-LuD.text" = " 2015";
+
+/* Class = "UILabel"; text = "Año:"; ObjectID = "ylG-pi-LxZ"; */
+"ylG-pi-LxZ.text" = "Año:";
+
+/* Class = "UILabel"; text = "Nivel"; ObjectID = "ylU-zc-faH"; */
+"ylU-zc-faH.text" = "Nivel";

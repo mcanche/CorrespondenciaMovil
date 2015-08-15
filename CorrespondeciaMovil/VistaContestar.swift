@@ -12,6 +12,8 @@ class VistaContestar: UIViewController
 {
 
     private var docto: Documento?;
+    private var usuario: Usuario?;
+    private var vistapadre: DoctosDeptoPend?
     
     @IBOutlet weak var fecharesp: UIDatePicker!
     @IBOutlet weak var respuesta: UITextView!
@@ -20,6 +22,21 @@ class VistaContestar: UIViewController
     func setDocto( _docto: Documento )
     {
         self.docto = _docto;
+    }
+    
+    func setUsuario( _usuario: Usuario )
+    {
+        self.usuario = _usuario;
+    }
+    
+    func setVistaPadre( _vistapadre: DoctosDeptoPend )
+    {
+        self.vistapadre = _vistapadre;
+    }
+    
+    func borrarElementoSel()
+    {
+        self.vistapadre?.borrarElementoSel();
     }
     
     override func viewDidLoad()
@@ -31,6 +48,18 @@ class VistaContestar: UIViewController
     {
         super.didReceiveMemoryWarning()
     }
+    
+    //Funciones touch
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
+    {
+        self.view.endEditing(true)
+    }
+    //UITextFieldDelegate
+    func textFieldShouldReturn(_textField: UITextField) -> Bool
+    {
+        _textField.resignFirstResponder()
+        return true
+    }
 
     @IBAction func responderDocumento(sender: AnyObject)
     {
@@ -38,6 +67,8 @@ class VistaContestar: UIViewController
         {
             self.docto?.setFechaRespuesta(Date.formatearFecha(fecharesp.date))
             self.docto?.setRespuesta(respuesta.text)
+            var doctos=DoctosRemoto(_usuario: self.usuario!);
+            doctos.responderCorrespondencia(self, _docto: (self.docto)!)
         }
         else
         {
@@ -53,14 +84,10 @@ class VistaContestar: UIViewController
         alert.addButtonWithTitle("Aceptar")
         alert.show()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func regresar()
+    {
+        self.navigationController?.popViewControllerAnimated(true)
     }
-    */
 
 }

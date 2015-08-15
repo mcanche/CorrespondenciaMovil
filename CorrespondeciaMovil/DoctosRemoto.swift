@@ -19,6 +19,7 @@ public class DoctosRemoto
     /*Propiedades del objeto*/
     private let urldoctos = "\(urlservidor)/get_all_oficiosarespuesta.php"
     private let urldoctosrespuesta = "\(urlservidor)/update_oficiorespuesta.php"
+    private let urlreportesemanal = "\(urlservidor)/get_reporte_semana.php"
     
     private var usuario: Usuario?;
     private var mensaje: String?;
@@ -60,21 +61,22 @@ public class DoctosRemoto
                     if( exito == Int(Estado.EXITO.rawValue) )
                     {
                         Mapeos.MapearDoctosRem(info["oficiores"] as! NSArray)
-                        _vista.ocultarEspera()
                     }
                     else
                     {
                         println(self.mensaje)
                     }
+                    _vista.ocultarEspera()
                 }
                 else
                 {
                     println(_error)
+                    _vista.ocultarEspera()
                 }
         }
         
     }
-    func responderCorrespondencia( _docto: Documento ) -> Bool
+    func responderCorrespondencia( _vista: VistaContestar, _docto: Documento ) -> Bool
     {
         var resultado: Bool = false;
         let parametros =
@@ -98,7 +100,10 @@ public class DoctosRemoto
                     }
                     if( exito == Int(Estado.EXITO.rawValue) )
                     {
-                       
+                        _docto.setIdestatus(3)
+                        DAO.actualizarDoctoFolio(_docto,_vigente: false)
+                        _vista.borrarElementoSel()
+                        _vista.regresar()
                     }
                     else
                     {
@@ -112,38 +117,44 @@ public class DoctosRemoto
         }
         return resultado;
     }
-    /*
-    public boolean responderCorrespondencia(Documento _docto)
+    func leerResumen( _vista: VistaReporteSemanal )
     {
-        boolean resultado = false;
-        List params = new ArrayList();
-        JSONObject json;
-        params.add(new BasicNameValuePair("cId", String.valueOf(_docto.getFolio())));
-        params.add(new BasicNameValuePair("respuesta", String.valueOf(_docto.getRespuesta())));
-        params.add(new BasicNameValuePair("fecresp", String.valueOf(_docto.getFechaRespuesta())));
-        params.add(new BasicNameValuePair("idval", String.valueOf(self.usuario.getPersona().getID())));
-        try
+        var parametronid: String = self.usuario!.getPerfil().getID().esValidador() ? "4" : "0"
+        
+        let parametros =
+        [
+            "nId" : self.usuario!.getNivel().getID()
+        ]
+        
+        Alamofire.request(.POST, self.urlreportesemanal,parameters: parametros).responseJSON()
             {
-                json = self.makeHttpRequest(Recursos.leerValorRecurso(self.context,URL_DOCTORESPONDER), TYPE_REQUEST, params);
-                self.mensaje = json.getString(self.tokenmensaje);
-                self.mensaje = self.mensaje==null ? "" : self.mensaje;
-                resultado = json.getInt(self.tokenexito) == Enumerados.Estado.EXITO.getValor();
-                if(resultado)
+                (_, _response, _JSON, _error) in
+                if ( _error == nil )
                 {
-                    String tablanom = "validadorpend";
-                    TablaSQLite tabla = new TablaSQLite(self.context, tablanom);
-                    FiltroSQL filtro = new FiltroSQL("folio", Enumerados.OperadoresLogicos.IGUAL, String.valueOf(_docto.getFolio()));
-                    Hashtable<String,FiltroSQL> filtros=new Hashtable<String,FiltroSQL>();
-                    filtros.put("folio",filtro);
-                    tabla.borrarBD(filtros);
+                    let info =  _JSON as! NSDictionary
+                    var exito: Int = (info[self.jsonexito] as? Int)!
+                    if( info[self.jsonmensaje] != nil && !(info[self.jsonmensaje] is NSNull) )
+                    {
+                        self.mensaje = (info[self.jsonmensaje] as? String)!
+                    }
+                    if( exito == Int(Estado.EXITO.rawValue) )
+                    {
+                        Mapeos.MapearResumen(info["tablares"] as! NSArray)
+                        _vista.leerReporte()
+                    }
+                    else
+                    {
+                        println(self.mensaje)
+                    }
+                    _vista.ocultarEspera()
+                }
+                else
+                {
+                    println(_error)
+                    _vista.ocultarEspera()
                 }
         }
-        catch (JSONException e)
-        {
-            e.printStackTrace();
-        }
-        params = null;json=null;
-        return resultado;
+
     }
-    */
+    
 }

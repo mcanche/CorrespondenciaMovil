@@ -15,6 +15,7 @@ class Documentos: NSManagedObject
 {
     
     @NSManaged var folio: NSNumber
+    @NSManaged var folsol: NSNumber
     @NSManaged var ofsol: NSNumber
     @NSManaged var asunto: String
     @NSManaged var idestatus: NSNumber

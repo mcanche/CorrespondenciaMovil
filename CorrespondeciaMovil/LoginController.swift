@@ -73,9 +73,7 @@ class LoginController: UIViewController
     
     func iniciarSesion()
     {
-        objusuario.text = "wilbert.echeverria"
-        objpass.text = "1234567"
-        
+
         let parametros =
         [
             jsonusuario : objusuario.text,

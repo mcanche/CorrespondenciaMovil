@@ -103,6 +103,7 @@ public class Mapeos
                 {
                     for d in docto
                     {
+                        (d as! Documentos).folsol = (dato["folsol"] as! String).toInt()!
                         (d as! Documentos).ofsol = (dato["ofisol"] as! String).toInt()!
                         (d as! Documentos).asunto = dato["asunto"] as! String
                         (d as! Documentos).idestatus = (dato["idst"] as! String).toInt()!
@@ -121,6 +122,7 @@ public class Mapeos
                 {
                     var nvodocto = Documentos(entity: ent!, insertIntoManagedObjectContext: context)
                     nvodocto.folio = folio
+                    nvodocto.folsol = (dato["folsol"] as! String).toInt()!
                     nvodocto.ofsol = (dato["ofisol"] as! String).toInt()!
                     nvodocto.asunto = dato["asunto"] as! String
                     nvodocto.idestatus = (dato["idst"] as! String).toInt()!
@@ -137,37 +139,57 @@ public class Mapeos
                 context.save(nil)
             }
         }
-        //Se borran los registros locales que no descargaron del servidor
+        //Se borran los registros locales que no se descargaron del servidor
         freq.predicate = NSPredicate(format: "vigente = %@", false)
         var doctonv = context.executeFetchRequest(freq, error: nil)!
         for d in doctonv
         {
             context.deleteObject(d as! NSManagedObject)
         }
+        
     }
-    /*
-    public static ArrayList<ResumenLinea> crearListaResumen(JSONArray _datos)
+    
+    class func MapearResumen(_datos: NSArray)
     {
-    ArrayList<ResumenLinea> lista = new ArrayList<ResumenLinea>();
-    JSONObject obj = null;
-    ResumenLinea linea = null;
-    try
-    {
-    if(_datos != null)
-    {
-    for(int i = 0; i < _datos.length() ; i++)
-    {
-    obj = (JSONObject) _datos.get(i);
-    linea = new ResumenLinea(obj.getString("nivel"),obj.getInt("recep"),obj.getInt("recib"),obj.getInt("conte"),obj.getInt("total"));
-    lista.add(linea);
+        //ReporteSemanal
+        var repsemregs: Array<AnyObject> = [];
+        var entidad: String = "ReporteSemanal";
+        let appdel : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context : NSManagedObjectContext = appdel.managedObjectContext!
+        let ent = NSEntityDescription.entityForName(entidad, inManagedObjectContext: context)
+        let freq : NSFetchRequest = NSFetchRequest(entityName: entidad)
+        /*Damos de baja los registros existentes*/
+        var doctonv = context.executeFetchRequest(freq, error: nil)!
+        for d in doctonv
+        {
+            context.deleteObject(d as! ReporteSemanal)
+        }
+        /*Encabezado*/
+        var nvalinea = ReporteSemanal(entity: ent!, insertIntoManagedObjectContext: context)
+        nvalinea.orden = 0
+        nvalinea.nivel = "Nivel"
+        nvalinea.recep = "Rec"
+        nvalinea.recib = "Ent"
+        nvalinea.conte = "Res"
+        nvalinea.total = "Total"
+        context.save(nil)
+        /*Recorremos la información leída del servidor*/
+        var i: Int = 1;
+        for lineas : AnyObject in _datos
+        {
+            if let linea = lineas as? NSDictionary
+            {
+                var nvalinea = ReporteSemanal(entity: ent!, insertIntoManagedObjectContext: context)
+                nvalinea.orden = i
+                nvalinea.nivel = linea["nivel"] as! String
+                nvalinea.recep = linea["recep"] as! String
+                nvalinea.recib = linea["recib"] as! String
+                nvalinea.conte = linea["conte"] as! String
+                nvalinea.total = linea["total"] as! String
+                context.save(nil)
+                i++;
+             }
+        }
     }
-    }
-    }
-    catch (JSONException e)
-    {
-    e.printStackTrace();
-    }
-    return lista;
-    }
-*/
+    
 }

@@ -55,6 +55,8 @@
 		189B60A11B506DD600177535 /* Documentos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A01B506DD600177535 /* Documentos.swift */; };
 		189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */; };
 		189FB0ED1B63E67200F0A1C2 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 189FB0E91B63E49300F0A1C2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18A08E5A1B7ECFA70038354B /* ReporteSemanal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08E591B7ECFA70038354B /* ReporteSemanal.swift */; };
+		18A08E5E1B7ED3090038354B /* VistaReporteSemanal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A08E5D1B7ED3090038354B /* VistaReporteSemanal.swift */; };
 		18C249D81B5A9BFA0017BC7E /* Imagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C249D71B5A9BFA0017BC7E /* Imagen.swift */; };
 		18EA995A1B6462960028DDDB /* Depto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA99591B6462960028DDDB /* Depto.swift */; };
 		18EA995C1B6466DB0028DDDB /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA995B1B6466DB0028DDDB /* Persona.swift */; };
@@ -173,6 +175,9 @@
 		189B60A01B506DD600177535 /* Documentos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Documentos.swift; path = ../Documentos.swift; sourceTree = "<group>"; };
 		189B60A21B508E9F00177535 /* DoctosDeptoPend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctosDeptoPend.swift; sourceTree = "<group>"; };
 		189FB0E41B63E49300F0A1C2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../Alamo/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		18A08E591B7ECFA70038354B /* ReporteSemanal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReporteSemanal.swift; sourceTree = "<group>"; };
+		18A08E5D1B7ED3090038354B /* VistaReporteSemanal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VistaReporteSemanal.swift; sourceTree = "<group>"; };
+		18A08E5F1B7EF4DE0038354B /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/Principal.strings"; sourceTree = "<group>"; };
 		18C249D71B5A9BFA0017BC7E /* Imagen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Imagen.swift; sourceTree = "<group>"; };
 		18EA99591B6462960028DDDB /* Depto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Depto.swift; sourceTree = "<group>"; };
 		18EA995B1B6466DB0028DDDB /* Persona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
@@ -274,10 +279,12 @@
 				1829706D1B5722FE00B75545 /* LaunchScreen.xib */,
 				183A36531B4EFBB500178E1A /* LoginController.swift */,
 				183A36211B4EF0E000178E1A /* Principal.storyboard */,
+				18A08E591B7ECFA70038354B /* ReporteSemanal.swift */,
 				183A36181B4EF0E000178E1A /* Supporting Files */,
-				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
-				181035A01B78C8330054DA9A /* VistaDetalle.swift */,
 				181035A61B79A62A0054DA9A /* VistaContestar.swift */,
+				181035A01B78C8330054DA9A /* VistaDetalle.swift */,
+				183A36541B4EFBB500178E1A /* VistaDocumentos.swift */,
+				18A08E5D1B7ED3090038354B /* VistaReporteSemanal.swift */,
 			);
 			name = CorrespondenciaMovil;
 			path = CorrespondeciaMovil;
@@ -584,12 +591,14 @@
 				18EA995E1B64733F0028DDDB /* Enumerados.swift in Sources */,
 				183A36571B4EFBB500178E1A /* VistaDocumentos.swift in Sources */,
 				189B60A31B508E9F00177535 /* DoctosDeptoPend.swift in Sources */,
+				18A08E5A1B7ECFA70038354B /* ReporteSemanal.swift in Sources */,
 				183FFAE01B75AA0C00275A81 /* Nivel.swift in Sources */,
 				18EA995A1B6462960028DDDB /* Depto.swift in Sources */,
 				183A36411B4EF14C00178E1A /* MenuLateralController.swift in Sources */,
 				183A36551B4EFBB500178E1A /* DoctosDepto.swift in Sources */,
 				183A361E1B4EF0E000178E1A /* CorrespondenciaMovil.xcdatamodeld in Sources */,
 				18EA995C1B6466DB0028DDDB /* Persona.swift in Sources */,
+				18A08E5E1B7ED3090038354B /* VistaReporteSemanal.swift in Sources */,
 				189B60A11B506DD600177535 /* Documentos.swift in Sources */,
 				183A36421B4EF14C00178E1A /* MenuLateral.swift in Sources */,
 				183FFAE21B75AC3E00275A81 /* Perfil.swift in Sources */,
@@ -633,6 +642,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				183A36221B4EF0E000178E1A /* Base */,
+				18A08E5F1B7EF4DE0038354B /* es-MX */,
 			);
 			name = Principal.storyboard;
 			sourceTree = "<group>";

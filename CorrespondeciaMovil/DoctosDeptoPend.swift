@@ -14,6 +14,25 @@ class DoctosDeptoPend: UITableViewController
     var doctos: Array<AnyObject> = []
     /************Identificadores segue************/
     private var segueiddet: String = "verdetpend";
+    private var indexPath: NSIndexPath?;
+    
+    private var usuario: Usuario?;
+    func setUsuario( _usuario: Usuario )
+    {
+        self.usuario = _usuario;
+    }
+    
+    @IBAction func verdet(sender: AnyObject)
+    {
+        /*
+        http://stackoverflow.com/questions/28659845/swift-how-to-get-the-indexpath-row-when-a-button-in-a-cell-is-tapped
+        */
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! UITableViewCell
+        self.indexPath = self.tableView.indexPathForCell(cell)
+        self.performSegueWithIdentifier(self.segueiddet, sender: nil)
+    }
     
     override func viewDidLoad()
     {
@@ -88,7 +107,7 @@ class DoctosDeptoPend: UITableViewController
         
         //Etiquetas
         var texto: UILabel = cell.viewWithTag(1) as! UILabel
-        texto.text = ("Folio: "+docto.valueForKeyPath("folio")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
+        texto.text = ("Folio: "+docto.valueForKeyPath("folsol")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
         texto = cell.viewWithTag(2) as! UILabel
         texto.text = ("Oficio: "+docto.valueForKeyPath("ofsol")!.stringValue!)
         texto = cell.viewWithTag(3) as! UILabel
@@ -139,19 +158,35 @@ class DoctosDeptoPend: UITableViewController
         return true
     }
     */
+    
+    func borrarElementoSel()
+    {
+        if(self.indexPath != nil)
+        {
+            self.doctos.removeAtIndex(self.indexPath!.row)
+            self.tableView.deleteRowsAtIndexPaths([self.indexPath!], withRowAnimation: UITableViewRowAnimation.Fade)
+            self.tableView.reloadData()
+        }
+        else
+        {
+            self.viewDidAppear(false)
+        }
+    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         
-        
         // Get the new view controller using [segue destinationViewController].
         if(segue.identifier == self.segueiddet )
         {
-            var elementosel : Documentos = doctos[self.tableView.indexPathForSelectedRow()!.row] as! Documentos
+            var indexPath: NSIndexPath? = self.tableView.indexPathForSelectedRow()
+            self.indexPath = indexPath == nil ? self.indexPath : indexPath
+            var elementosel : Documentos = doctos[self.indexPath!.row] as! Documentos
             let vistadet : VistaDetalle = segue.destinationViewController as! VistaDetalle
             var docto: Documento = Documento();
             //Llenamos el objeto de intercambio
             docto.setFolio(elementosel.folio.integerValue)
+            docto.setFolSol(elementosel.folsol.integerValue)
             docto.setOf_sol(elementosel.ofsol.integerValue)
             docto.setAsunto(elementosel.asunto)
             docto.setIdestatus(elementosel.idestatus.charValue)

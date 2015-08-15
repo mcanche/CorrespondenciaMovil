@@ -12,18 +12,23 @@ import UIKit
 
 class DAO
 {
-    class func actualizarDoctoFolio( _docto: Documento )
+    class func actualizarDoctoFolio( _docto: Documento, _vigente: Bool = false )
     {
         let appdel : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let context : NSManagedObjectContext = appdel.managedObjectContext!
         
-        /*Se invalidan los registros locales*/
+        /*Actualiza el estatus*/
         let freqbu : NSBatchUpdateRequest = NSBatchUpdateRequest(entityName: "Documentos")
+        let folio: NSNumber = _docto.getFolio()
+        freqbu.predicate = NSPredicate(format: "folio = %@", folio)
         freqbu.propertiesToUpdate =
             [
-                "idestatus" : _docto.getIdestatus().getID()
+                "idestatus" : _docto.getIdestatus().getID(),
+                "estatus" : _docto.getIdestatus().getEstatus(),
+                "vigente" : _vigente
             ]
         freqbu.resultType = .UpdatedObjectsCountResultType;
         var res: NSBatchUpdateResult = context.executeRequest(freqbu, error: nil) as! NSBatchUpdateResult
+        //println(res.result)
     }
 }

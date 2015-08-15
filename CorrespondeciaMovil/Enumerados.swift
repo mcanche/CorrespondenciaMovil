@@ -265,4 +265,24 @@ public enum Estatus
         }
         return resultado;
     }
+    func getEstatus() -> String
+    {
+        var resultado: String = ""
+        switch self
+        {
+        case .RECEPCIONADO(let _id, let _icon, let _leyenda, let _color):
+            resultado = _leyenda;
+            break;
+        case .ENTREGADODEPTO(let _id, let _icon, let _leyenda, let _color):
+            resultado = _leyenda;
+            break;
+        case .CONTESTADO(let _id, let _icon, let _leyenda, let _color):
+            resultado = _leyenda;
+            break;
+        default:
+            resultado = ""
+            break;
+        }
+        return resultado;
+    }
 }

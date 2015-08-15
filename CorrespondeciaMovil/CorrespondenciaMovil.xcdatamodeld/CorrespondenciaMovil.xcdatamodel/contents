@@ -6,6 +6,7 @@
         <attribute name="depto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="estatus" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="folio" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="folsol" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="iddepto" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="idestatus" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="idnivel" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -15,7 +16,16 @@
         <attribute name="solicitud" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="vigente" optional="YES" attributeType="Boolean" syncable="YES"/>
     </entity>
+    <entity name="ReporteSemanal" representedClassName="ReporteSemanal" syncable="YES">
+        <attribute name="conte" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nivel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orden" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="recep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="recib" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Documentos" positionX="-63" positionY="-18" width="128" height="240"/>
+        <element name="Documentos" positionX="-63" positionY="-18" width="128" height="255"/>
+        <element name="ReporteSemanal" positionX="-63" positionY="90" width="128" height="135"/>
     </elements>
 </model>

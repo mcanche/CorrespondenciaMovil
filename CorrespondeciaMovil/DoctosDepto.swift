@@ -16,9 +16,24 @@ class DoctosDepto: UITableViewController
     /************Identificadores segue************/
     private var segueiddetrec: String = "verdetrec";
     private var segueiddetresp: String = "verdetresp";
+    private var segueiddet: String = "";
     
     private var estatus: Int8 = 0;
     private var imagennom: String = "rojo.png";
+    
+    private var indexPath: NSIndexPath?;
+    
+    @IBAction func verdet(sender: AnyObject)
+    {
+        /*
+        http://stackoverflow.com/questions/28659845/swift-how-to-get-the-indexpath-row-when-a-button-in-a-cell-is-tapped
+        */
+        let button = sender as! UIButton
+        let view = button.superview!
+        let cell = view.superview as! UITableViewCell
+        self.indexPath = self.tableView.indexPathForCell(cell)
+        self.performSegueWithIdentifier(self.segueiddet, sender: nil)
+    }
     
     
     override func viewDidLoad()
@@ -33,7 +48,7 @@ class DoctosDepto: UITableViewController
         let context:NSManagedObjectContext = appDel.managedObjectContext!
         let freq : NSFetchRequest = NSFetchRequest(entityName: "Documentos")
         let filtro1: NSPredicate = NSPredicate(format: "vigente = %@", true);
-        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", 2);//self.estatus);
+        let filtro2: NSPredicate = NSPredicate(format: "idestatus = %d", self.estatus);
         var filtros = NSCompoundPredicate.andPredicateWithSubpredicates([filtro1, filtro2])
         freq.predicate = filtros
         doctos = context.executeFetchRequest(freq, error: nil)!
@@ -49,10 +64,12 @@ class DoctosDepto: UITableViewController
         case 1:
             self.estatus = 1;
             self.imagennom = "rojo.png";
+            self.segueiddet = self.segueiddetrec
             break;
         case 3:
             self.estatus = 3;
             self.imagennom = "verde2.png";
+            self.segueiddet = self.segueiddetresp
             break
         default:
             break
@@ -79,7 +96,7 @@ class DoctosDepto: UITableViewController
         
         //Etiquetas
         var texto: UILabel = cell.viewWithTag(1) as! UILabel
-        texto.text = ("Folio: "+docto.valueForKeyPath("folio")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
+        texto.text = ("Folio: "+docto.valueForKeyPath("folsol")!.stringValue!+"/"+docto.valueForKeyPath("anio")!.stringValue!)
         texto = cell.viewWithTag(2) as! UILabel
         texto.text = ("Oficio: "+docto.valueForKeyPath("ofsol")!.stringValue!)
         texto = cell.viewWithTag(3) as! UILabel
@@ -133,15 +150,21 @@ class DoctosDepto: UITableViewController
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        var elementosel : Documentos = doctos[self.tableView.indexPathForSelectedRow()!.row] as! Documentos
-        
         // Get the new view controller using [segue destinationViewController].
         if(segue.identifier == self.segueiddetrec || segue.identifier == self.segueiddetresp)
         {
+            
+            var indexPath: NSIndexPath? = self.tableView.indexPathForSelectedRow()
+            if (indexPath == nil)
+            {
+                indexPath = self.indexPath
+            }
+            var elementosel : Documentos = doctos[indexPath!.row] as! Documentos
             let vistadet : VistaDetalle = segue.destinationViewController as! VistaDetalle
             var docto: Documento = Documento();
             //Llenamos el objeto de intercambio
             docto.setFolio(elementosel.folio.integerValue)
+            docto.setFolSol(elementosel.folsol.integerValue)
             docto.setOf_sol(elementosel.ofsol.integerValue)
             docto.setAsunto(elementosel.asunto)
             docto.setIdestatus(elementosel.idestatus.charValue)

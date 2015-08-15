@@ -28,8 +28,6 @@ class Usuario
     private var perfil: Perfil?;
     private var nivel: Nivel?;
     private var depto: Depto?;
-    /**/
-    private var ocupado: Bool=false; //Realizando lecturas en el servidor
     
     /*Funciones Getters y setters*/
     func setUsuario( _usuario: String)
@@ -69,10 +67,6 @@ class Usuario
     {
         return self.depto!;
     }
-    func getOcupado() -> Bool
-    {
-        return self.ocupado;
-    }
     /*Constructores y destructores*/
     init()
     {
@@ -95,13 +89,11 @@ class Usuario
             jsonusuario : self.usuario,
             jsonpwd : self.password
         ]
-        self.ocupado = true;
         Alamofire.request(.POST, self.urlusuario,parameters: parametros).responseJSON()
             {
                 (_, _response, _JSON, _error) in
                 if ( _error == nil )
                 {
-                    self.ocupado = false;
                     let info =  _JSON as! NSDictionary
                     var exito: Int = (info[self.jsonexito] as? Int)!
                     //println(info)
@@ -121,7 +113,6 @@ class Usuario
                 }
                 else
                 {
-                    self.ocupado = false;
                     println(_error)
                 }
         }

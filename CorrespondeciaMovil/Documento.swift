@@ -19,6 +19,7 @@ class Documento
     private var fondo: Bool = false;
     /*Propiedades del objeto*/
     private var folio: Int ;
+    private var folsol: Int ;
     private var of_sol: Int ;
     private var asunto: String ;
     private var idestatus: Estatus ;
@@ -48,6 +49,14 @@ class Documento
     func getFolio() -> Int
     {
         return self.folio;
+    }
+    func setFolSol( _folsol: Int)
+    {
+        self.folsol=_folsol;
+    }
+    func getFolSol() -> Int
+    {
+        return self.folsol;
     }
     func setOf_sol( _of_sol: Int)
     {
@@ -171,6 +180,7 @@ class Documento
         fondo = false;
         /*Propiedades del objeto*/
         folio = 0 ;
+        folsol = 0 ;
         of_sol = 0 ;
         asunto = "";
         idestatus = Estatus(_tipo: 1) ;
@@ -186,7 +196,7 @@ class Documento
         fecharespuesta = "";
     }
     init(
-        _folio: Int, _anio: Int, _of_sol: Int,
+        _folio: Int, _folsol: Int, _anio: Int, _of_sol: Int,
         _idestatus: Int8, _estatus: String, _asunto: String,
         _solicitud: NSDate, _recepcion: NSDate,
         _idnivel: Int, _nivel: String,
@@ -195,6 +205,7 @@ class Documento
     )
     {
     self.folio=_folio;
+    self.folsol=_folsol;
     self.anio=_anio;
     self.of_sol=_of_sol;
     self.idestatus=Estatus(_tipo: _idestatus);
@@ -217,7 +228,7 @@ class Documento
     */
     func getFolioCompleto() -> String
     {
-        return "\(self.folio)/\(self.anio)";
+        return "\(self.folsol)/\(self.anio)";
     }
     func getSolicitudFechaFormateada() -> String
     {

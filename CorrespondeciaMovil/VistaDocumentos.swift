@@ -13,6 +13,7 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
     @IBOutlet weak var menuButton:UIBarButtonItem!
     /************Identificadores segue************/
     private var segueiddet: String = "doctocontestar";
+    private var segueidrepsem: String = "verRepSemanal";
     
     private var menulat: MenuLateral = MenuLateral()
     private var espera: UIAlertView = UIAlertView()
@@ -40,7 +41,9 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
     func iniciarValidador( _esvalidador: Bool)
     {
         /*Habilitamos/ deshabilitamos la sección de pendientes*/
-        (self.tabBar.items![1] as! UITabBarItem).enabled = _esvalidador;
+        //(self.tabBar.items![1] as! UITabBarItem).enabled = _esvalidador;
+        (self.tabBar.items![0] as! UITabBarItem).enabled = !_esvalidador;
+        (self.tabBar.items![2] as! UITabBarItem).enabled = !_esvalidador;
         self.navigationItem.rightBarButtonItem?.enabled = _esvalidador;
         if( _esvalidador )
         {
@@ -78,14 +81,17 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
     
     func menuLateralDidSelectedButtonAtIndex(_index: Int)
     {
+        menulat.mostrarMenuLateral(!menulat.menulateralabierto)
         switch(_index)
         {
             case 0:
                 self.leerCorrespondencia()
                 break;
             case 1:
+                self.performSegueWithIdentifier(self.segueidrepsem, sender: nil)
                 break;
             case 2:
+                
                 let vc : AnyObject! = storyboard?.instantiateViewControllerWithIdentifier("Login")
                 vc.navigationItem.hidesBackButton = true
                 showViewController(vc as! UIViewController, sender: vc)
@@ -120,8 +126,11 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
             {
                 var elementosel : Documentos = vistadocs.doctos[indiceesel!] as! Documentos
                 var docto: Documento = Documento();
+                vistadet.setVistaPadre(vistadocs);
+                vistadet.setUsuario(self.usuario!);
                 //Llenamos el objeto de intercambio
                 docto.setFolio(elementosel.folio.integerValue)
+                docto.setFolSol(elementosel.folsol.integerValue)
                 docto.setOf_sol(elementosel.ofsol.integerValue)
                 docto.setAsunto(elementosel.asunto)
                 docto.setIdestatus(elementosel.idestatus.charValue)
@@ -136,6 +145,11 @@ class VistaDocumentos: UITabBarController, MenuLateralDelegate
                 vistadet.setDocto(docto);
             }
 
+        }
+        if(segue.identifier == self.segueidrepsem)
+        {
+            let vistarepsem : VistaReporteSemanal = segue.destinationViewController as! VistaReporteSemanal
+            vistarepsem.setUsuario(self.usuario!);
         }
         
     }
