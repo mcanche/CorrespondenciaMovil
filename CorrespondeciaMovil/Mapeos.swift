@@ -171,7 +171,7 @@ public class Mapeos
         nvalinea.recep = "Rec"
         nvalinea.recib = "Ent"
         nvalinea.conte = "Res"
-        nvalinea.total = "Total"
+        nvalinea.total = "Tot"
         context.save(nil)
         /*Recorremos la información leída del servidor*/
         var i: Int = 1;
